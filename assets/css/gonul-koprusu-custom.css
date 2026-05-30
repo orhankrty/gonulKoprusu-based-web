@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Proje: Gönül Köprüsü - Sosyal Dayanışma ve Gönüllü Destek Platformu
+   Geliştirici: Hüseyin Orhan KIRTAY
+   Modül: Custom CSS (Override & A11y)
+   Açıklama: Bootstrap 5 ve şablon varsayılanlarını güvenli bir şekilde ezerek 
+             projeye özgü renk paletini ve 50+ yaş erişilebilirlik 
+             (Accessibility - A11y) kurallarını uygular.
+   ========================================================================== 
+*/
+
+/* --- 1. GLOBAL DEĞİŞKENLER (Renk Paleti & Mimari) --- */
+:root {
+    /* Ana Renkler */
+    --gk-primary-blue: #1A365D; /* Güven, Huzur, Devlet Ciddiyeti (Lacivert) */
+    --gk-secondary-orange: #F97316; /* Gönüllü Enerjisi, Sıcaklık, Eylem (Canlı Turuncu) */
+    
+    /* Zemin ve Metin Renkleri */
+    --gk-bg-light: #F8FAFC; /* Göz Yormayan Temiz Açık Gri/Mavi Zemin */
+    --gk-text-dark: #334155; /* Keskin Siyah Yerine Okunabilir Koyu Gri */
+    --gk-text-muted: #64748B;
+    
+    /* A11y (Erişilebilirlik) Değişkenleri */
+    --gk-font-base: 1.1rem; /* 50+ Yaş için büyütülmüş varsayılan font boyutu */
+}
+
+/* --- 2. ERİŞİLEBİLİRLİK (A11y) VE TEMEL TİPOGRAFİ --- */
+body {
+    background-color: var(--gk-bg-light);
+    color: var(--gk-text-dark);
+    font-size: var(--gk-font-base);
+    line-height: 1.7; /* Okunabilirliği artırmak için satır aralığı açıldı */
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--gk-primary-blue) !important; /* Tüm başlıklar güven mavisinde */
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* --- 3. BUTONLAR VE CALL TO ACTION (CTA) EZMELERİ --- */
+/* Şablonun varsayılan butonu (btn_one) eziliyor */
+.btn_one {
+    background: var(--gk-secondary-orange) !important;
+    color: #ffffff !important;
+    font-weight: bold;
+    border: 2px solid var(--gk-secondary-orange) !important;
+    border-radius: 8px !important; /* Modern ve yumuşak köşeler */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(249, 115, 22, 0.2);
+}
+
+.btn_one:hover, .btn_one:focus {
+    background: #ffffff !important;
+    color: var(--gk-secondary-orange) !important;
+    box-shadow: 0 6px 15px rgba(249, 115, 22, 0.4);
+    transform: translateY(-2px); /* Tıklama hissiyatı */
+}
+
+/* Navbar Giriş Butonu */
+.header-btn {
+    color: var(--gk-primary-blue) !important;
+    border-color: var(--gk-primary-blue) !important;
+    font-weight: bold;
+    border-radius: 8px !important;
+}
+
+.header-btn:hover {
+    background: var(--gk-primary-blue) !important;
+    color: #ffffff !important;
+}
+
+/* --- 4. MODÜL VE KART TASARIMLARI --- */
+/* Hizmet/Destek Kutuları (Nasıl Çalışır Bölümü) */
+.single_tp {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--gk-primary-blue);
+    padding: 30px 20px;
+}
+
+.single_tp:hover {
+    transform: translateY(-10px);
+    border-top-color: var(--gk-secondary-orange);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* İkonların arka planı ve rengi */
+.single_tp span {
+    color: var(--gk-secondary-orange) !important;
+    background: rgba(249, 115, 22, 0.1) !important;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 35px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* Etkinlik ve Talep Kartları (.single_course ezmesi) */
+.single_course {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+}
+
+.single_course h4 a {
+    color: var(--gk-primary-blue);
+    font-weight: 700;
+}
+
+.single_course h4 a:hover {
+    color: var(--gk-secondary-orange);
+}
+
+/* --- 5. MENÜ VE ERİŞİLEBİLİRLİK ZITLIKLARI --- */
+#main-menu ul li a {
+    color: var(--gk-primary-blue) !important;
+    font-size: 1.15rem; /* Menü metinleri 50+ yaş için büyütüldü */
+    font-weight: 600;
+}
+
+#main-menu ul li a:hover {
+    color: var(--gk-secondary-orange) !important;
+}
+
+/* Footer Düzenlemeleri */
+.footer {
+    background-color: var(--gk-primary-blue);
+    color: #ffffff;
+}
+
+.footer h3, .footer h4 {
+    color: #ffffff !important;
+}
+
+.footer a {
+    color: rgba(255,255,255,0.8);
+}
+
+.footer a:hover {
+    color: var(--gk-secondary-orange);
+    text-decoration: none;
+}
