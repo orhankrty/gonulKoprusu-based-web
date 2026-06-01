@@ -147,3 +147,65 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--gk-secondary-orange);
     text-decoration: none;
 }
+
+/* =========================================
+   GÖNÜL KÖPRÜSÜ - PRELOADER (ÖZEL LOGO)
+========================================= */
+
+/* Ana Arka Planı Ferahlatıyoruz */
+.preloaders {
+    background-color: #f8f9fa !important; /* Göz yormayan yumuşak açık gri zemin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+.gk-brand-loader {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Gönül Köprüsü İkon Tasarımı ve Animasyonu */
+.gk-icon-pulse {
+    font-size: 70px;
+    color: var(--gk-secondary-orange, #ff7b00); /* Projenizin Enerji Turuncusu */
+    margin-bottom: 20px;
+    animation: heartPulse 1.5s infinite ease-in-out;
+}
+
+/* Proje Adı Tipografisi */
+.gk-loader-title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 800;
+    color: var(--gk-primary-blue, #1a2237); /* Projenizin Güven Mavisi */
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+/* Bekleme Metni Animasyonu */
+.gk-loader-desc {
+    color: #6c757d;
+    font-style: italic;
+    font-size: 1.1rem;
+    animation: fadeInOut 2s infinite;
+}
+
+/* --- KEYFRAMES (Animasyon Motorları) --- */
+
+/* Nefes Alan Kalp Atışı Efekti */
+@keyframes heartPulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.15); opacity: 1; text-shadow: 0 0 25px rgba(255, 123, 0, 0.4); }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* Yumuşak Yanıp Sönme Efekti */
+@keyframes fadeInOut {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
