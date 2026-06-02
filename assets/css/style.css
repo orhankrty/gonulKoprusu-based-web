@@ -2364,7 +2364,7 @@ font-size: 18px;
 }
 .single_footer ul li{}
 .single_footer ul li a {
-	color: #0b104a;
+	color: white;
 	-webkit-transition: all 0.3s ease 0s;
 	-o-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
