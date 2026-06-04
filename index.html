@@ -54,14 +54,15 @@
                     <div class="col-60 d-flex">
                         <nav id="main-menu" aria-label="Ana Menü">
                             <ul>
-                                <li><a href="index.html">Ana Sayfa</a></li>
-                                <li><a href="about.html">Hakkımızda</a></li>                              
+                                <li><a href="index.html">Ana Sayfa</a></li> 
                                 <li><a href="index.html#destek-turleri">Nasıl Çalışır?</a></li>
-								<li><a href="instructor.html">Gönüllülerimiz</a></li> 
-								<li><a href="blog.html">Haberler</a></li>                              
+                                <li><a href="about.html">Hakkımızda</a></li>                   
                                 <li><a href="course.html">Etkinlikler</a></li>  
-								<li><a href="faq.html">S.S.S.</a>                         
+						        <li><a href="blog.html">Haberler</a></li>
+                                <li><a href="instructor.html">Gönüllülerimiz</a></li>  
+						        <li><a href="faq.html">S.S.S.</a>       
                                 <li><a href="contact.html">İletişim</a></li>
+                                <li><a href="kvkk.html">KVKK</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -77,13 +78,14 @@
                     
                     <ul class="mobile_menu">                        
                         <li><a href="index.html">Ana Sayfa</a></li> 
-                        <li><a href="about.html">Proje Hakkında</a></li>                   
                         <li><a href="index.html#destek-turleri">Nasıl Çalışır?</a></li>
-						<li><a href="instructor.html">Gönüllülerimiz</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>                   
+                        <li><a href="course.html">Etkinlikler</a></li>  
 						<li><a href="blog.html">Haberler</a></li>
-                        <li><a href="course.html">Etkinlikler</a></li>    
-						<li><a href="faq.html">S.S.S.</a>       
+                        <li><a href="instructor.html">Gönüllülerimiz</a></li>  
+						<li><a href="faq.html">SSS</a>       
                         <li><a href="contact.html">İletişim</a></li>
+                        <li><a href="kvkk.html">KVKK</a></li>
                     </ul>     
 
                 </div>
@@ -273,18 +275,41 @@
 
         <div class="partner-logo section-padding">
             <div class="container">
-                <div class="row part_bg align-items-center">
-                    <div class="col-lg-4 col-sm-4 col-xs-12">
+                <div class="row part_bg align-items-center" style="background: #ffffff; border-radius: 12px; box-shadow: 0 5px 25px rgba(0,0,0,0.04); padding: 40px 20px;">
+                    
+                    <!-- Başlık Alanı -->
+                    <div class="col-lg-4 col-md-12 text-center text-lg-start mb-4 mb-lg-0" style="border-right: 2px solid #f1f1f1;">
                         <div class="partner_title">
-                            <h3>Projeye Destek Veren <p><br></p> <span>Kurum ve Topluluklar</span></h3>
+                            <h3 style="color: var(--gk-primary-blue); font-weight: 800; font-size: 1.5rem; margin: 0; line-height: 1.4;">
+                                Projeye Destek Veren <br>
+                                <span style="color: var(--gk-secondary-orange); font-weight: 600; font-size: 1.2rem;">Kurum ve Topluluklar</span>
+                            </h3>
                         </div>                  
-                    </div><div class="col-lg-8 col-sm-8 col-xs-12 text-center">
-                        <div class="partner">
-                            <a href="#"><img src="assets/img/clients/1.png" alt="Samsun Üniversitesi"></a>
-                            <a href="#"><img src="assets/img/clients/2.png" alt="Bilişim Teknolojileri Kulübü"></a>
-                            <a href="#"><img src="assets/img/clients/3.png" alt="Belediye"></a>
+                    </div>
+                    
+                    <!-- Logolar Alanı -->
+                    <div class="col-lg-8 col-md-12">
+                        <!-- justify-content-between ve w-100 ile alanı tam doldurup sağdaki boşluğu yok ettik -->
+                        <div class="partner d-flex flex-wrap justify-content-between align-items-center w-100 px-lg-3">
+                            
+                            <!-- Logo 1: Samsun Üniversitesi (Boyut büyütüldü: 110px) -->
+                            <a href="https://samsun.edu.tr/" target="_blank" style="text-decoration: none;">
+                                <img src="assets/my-img/logo1.png" alt="Samsun Üniversitesi" style="height: 100px; width: auto; max-width: 100%; object-fit: contain;">
+                            </a>
+                            
+                            <!-- Logo 2: Samsun Büyükşehir Belediyesi -->
+                            <a href="https://samsun.bel.tr/" target="_blank" style="text-decoration: none;">
+                                <img src="assets/my-img/logo3.png" alt="Samsun Büyükşehir Belediyesi" style="height: 100px; width: auto; max-width: 100%; object-fit: contain;">
+                            </a>
+
+                            <!-- Logo 3: Proje ve AR-GE Topluluğu (Scale %30 büyütülerek görsel denge sağlandı) -->
+                            <a href="https://www.instagram.com/samuprojearge/" target="_blank" style="text-decoration: none;">
+                                <img src="assets/my-img/logo2.png" alt="Proje ve AR-GE TOPLULUĞU" style="height: 100px; width: auto; max-width: 100%; object-fit: contain; transform: scale(1.3);">
+                            </a>
+                            
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -331,38 +356,67 @@
         </section>
 
 
-        <div id="iletisim" class="footer section-padding">
+       <div id="iletisim" class="footer" style="background-color: var(--gk-primary-blue); padding: 70px 0 50px;">
             <div class="container">             
-                <div class="row">                       
-                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                <div class="row justify-content-between">                       
+                    
+                    <div class="col-lg-4 col-md-6 col-12 mb-5 mb-lg-0">
                         <div class="single_footer">
-                            <a href="index.html"><h3>Gönül Köprüsü</h3></a>         
-                            <p>Samsun'da yaşayan ihtiyaç sahibi 50 yaş ve üzeri yalnız bireylerin sosyal destek ihtiyaçlarını gönüllülük esasıyla çözen dijital dayanışma platformu.</p>
+                            <a href="index.html" style="text-decoration: none;">
+                                <h3 style="color: #ffffff; font-weight: 700; margin-bottom: 20px; font-size: 1.8rem; letter-spacing: -0.5px;">Gönül Köprüsü</h3>
+                            </a>        
+                            <p style="color: rgba(255,255,255,0.7); line-height: 1.8; font-size: 1rem; padding-right: 20px; margin-bottom: 0;">
+                                Samsun'da yaşayan ihtiyaç sahibi 50 yaş ve üzeri yalnız bireylerin sosyal destek ihtiyaçlarını gönüllülük esasıyla çözen dijital dayanışma platformu.
+                            </p>
                         </div>          
-                    </div><div class="col-lg-4 col-sm-6 col-xs-12">
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 col-12 mb-5 mb-lg-0 d-flex justify-content-lg-center">
                         <div class="single_footer">
-                            <h4>Hızlı Bağlantılar</h4>
-                            <ul>
-                                <li><a href="index.html#hakkimizda">Proje Hakkında</a></li>
-								<li><a href="instructor.html">Gönüllülerimiz</a></li>
-                                <li><a href="contact.html">Gönüllü Başvuru Formu</a></li>
-                                <li><a href="contact.html">Destek Talebi Oluştur</a></li>
-                                <li><a href="#">Kullanım Koşulları (KVKK)</a></li>
+                            <h4 style="color: #ffffff; font-weight: 600; margin-bottom: 25px; font-size: 1.3rem;">Hızlı Bağlantılar</h4>
+                            <ul class="list-unstyled" style="margin: 0; padding: 0;">
+                                <li style="margin-bottom: 12px;">
+                                    <a href="index.html#hakkimizda" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s;"><i class="ti-angle-right" style="font-size: 0.8rem; margin-right: 8px; color: var(--gk-secondary-orange);"></i> Proje Hakkında</a>
+                                </li>
+                                <li style="margin-bottom: 12px;">
+                                    <a href="instructor.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s;"><i class="ti-angle-right" style="font-size: 0.8rem; margin-right: 8px; color: var(--gk-secondary-orange);"></i> Kahraman Gönüllülerimiz</a>
+                                </li>
+                                <li style="margin-bottom: 12px;">
+                                    <a href="contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s;"><i class="ti-angle-right" style="font-size: 0.8rem; margin-right: 8px; color: var(--gk-secondary-orange);"></i> Gönüllü Başvuru Formu</a>
+                                </li>
+                                <li style="margin-bottom: 12px;">
+                                    <a href="contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s;"><i class="ti-angle-right" style="font-size: 0.8rem; margin-right: 8px; color: var(--gk-secondary-orange);"></i> Destek Talebi Oluştur</a>
+                                </li>
+                                <li>
+                                    <a href="kvkk.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s;"><i class="ti-angle-right" style="font-size: 0.8rem; margin-right: 8px; color: var(--gk-secondary-orange);"></i> Kullanım Koşulları (KVKK)</a>
+                                </li>
                             </ul>
                         </div>
-                    </div><div class="col-lg-4 col-sm-6 col-xs-12">
+                    </div>
+                    
+                    <!-- 3. Sütun: İletişim Bilgileri (İkonlar dikeyde mükemmel ortalandı) -->
+                    <div class="col-lg-4 col-md-12 col-12">
                         <div class="single_footer">
-                            <h4>İletişim Bilgileri</h4>
-                            <div class="sf_contact">
-                                <span class="ti-map"></span>
-                                <p>Samsun Üniversitesi Merkez Kampüsü, Samsun, Türkiye</p>
+                            <h4 style="color: #ffffff; font-weight: 600; margin-bottom: 25px; font-size: 1.3rem;">İletişim Bilgileri</h4>
+                            
+                            <!-- DİKKAT: sf_contact sınıfı silindi, şablonun bozuk CSS'i devre dışı bırakıldı! -->
+                            <div class="d-flex align-items-center mb-4">
+                                <div style="width: 45px; height: 45px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">
+                                    <i class="ti-map" style="color: var(--gk-secondary-orange); font-size: 1.3rem; line-height: 1;"></i>
+                                </div>
+                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 0;">Samsun Üniversitesi Ballıca Kampüsü<br>Samsun, Türkiye</p>
                             </div>
-                            <div class="sf_contact">
-                                <span class="ti-email"></span>
-                                <p>iletisim@gonulkoprusu.org</p>
+                            
+                            <div class="d-flex align-items-center">
+                                <div style="width: 45px; height: 45px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">
+                                    <i class="ti-email" style="color: var(--gk-secondary-orange); font-size: 1.3rem; line-height: 1;"></i>
+                                </div>
+                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 0;">iletisim@gonulkoprusu.org</p>
                             </div>
+                            
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
