@@ -1,0 +1,736 @@
+[d0d420f] 04.06.2026 22:23 | Yazar: orhan | Mesaj:
+main menu bar updated in hesabim.html page
+
+ hesabim.html | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+[81e927c] 04.06.2026 22:20 | Yazar: orhan | Mesaj:
+refactor(girisYap): ortak UI bileşenleri girisYap.html sayfasına senkronize edildi
+
+Detaylar:
+- Navbar: Üst menü (d-flex, gap-2) 3'lü buton sistemi (Giriş, Gönüllü Ol, Hesabım) ve mobil menü KVKK linkiyle senkronize edildi.
+- Footer: Eski footer modülü, dikey hizalaması optimize edilmiş (align-items-center) ve güncel Ballıca Kampüsü adresli profesyonel footer ile değiştirildi.
+- Style: HTML kodu genelinde satır boşlukları ve girintiler "Clean Code" standartlarına uygun olarak düzenlendi.
+
+ girisYap.html | 141 ++++++----
+ index2.html   | 819 ----------------------------------------------------------
+ pricing.html  | 372 --------------------------
+ 3 files changed, 87 insertions(+), 1245 deletions(-)
+
+[d6e57f3] 04.06.2026 22:16 | Yazar: orhan | Mesaj:
+refactor(thank-you): ortak UI bileşenleri thank_you.html sayfasına senkronize edildi
+
+Detaylar:
+- Navbar: Üst menü ve mobil menü, projenin ana mimarisi olan 3'lü buton (Giriş, Gönüllü Ol, Hesabım) ve KVKK bağlantısı ile güncellendi.
+- Footer: Eski footer modülü, dikey hizalaması optimize edilmiş (align-items-center) ve güncel Ballıca Kampüsü adresli profesyonel footer ile değiştirildi.
+- style: Tüm kod bloğu "Clean Code" standartlarına uygun olarak girintilendi ve formatlandı.
+
+ thank-you.html | 303 +++++++++++++++++++++++++++++++++------------------------
+ 1 file changed, 174 insertions(+), 129 deletions(-)
+
+[1cc9e27] 04.06.2026 22:14 | Yazar: orhan | Mesaj:
+refactor(404): ortak UI bileşenleri 404.html sayfasına senkronize edildi
+
+Detaylar:
+- Navbar: Üst menü (d-flex, gap-2) 3'lü buton sistemi (Giriş, Gönüllü Ol, Hesabım) ve mobil menü KVKK linkiyle senkronize edildi.
+- Footer: Hizalamasız eski alt bilgi modülü kaldırılarak; tipografik olarak optimize edilmiş (align-items-center) ve merkezi (Ballıca Kampüsü adresli) yeni footer modülü entegre edildi.
+- Style: 404 hata sayfası, projenin modern ve soft tasarım diliyle (shadow, border-radius) yeniden yapılandırıldı.
+- style: HTML kodu genelinde girintiler ve kod formatı temizlendi.
+
+ 404.html | 314 +++++++++++++++++++++++++++++++++++++--------------------------
+ 1 file changed, 184 insertions(+), 130 deletions(-)
+
+[094de6d] 04.06.2026 22:13 | Yazar: orhan | Mesaj:
+refactor(faq): ortak UI bileşenleri faq.html sayfasına senkronize edildi
+
+Detaylar:
+- Navbar: Üst menü (d-flex, gap-2) 3'lü buton sistemi (Giriş, Gönüllü Ol, Hesabım) ve mobil menü KVKK linkiyle senkronize edildi.
+- Footer: Eski footer modülü, dikey hizalaması optimize edilmiş (align-items-center) ve güncel Ballıca Kampüsü adresli profesyonel footer ile değiştirildi.
+- style: HTML kodu genelinde satır boşlukları ve girintiler "Clean Code" standartlarına uygun olarak düzenlendi.
+
+ kvkk.html | 284 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 143 insertions(+), 141 deletions(-)
+
+[b9fc419] 04.06.2026 22:12 | Yazar: orhan | Mesaj:
+refactor(contact): ortak UI bileşenleri contact.html sayfasına senkronize edildi
+
+Detaylar:
+- Navbar: Üst menü (d-flex, gap-2) 3'lü buton sistemi (Giriş, Gönüllü Ol, Hesabım) ve mobil menü KVKK linkiyle senkronize edildi.
+- Footer: Eski footer modülü, dikey hizalaması optimize edilmiş (align-items-center) ve güncel Ballıca Kampüsü adresli profesyonel footer ile değiştirildi.
+- UX Kararı: İletişim sayfasında odağın form ve iletişim kanallarında kalması için "Paydaşlar (Partnerler)" modülü hariç tutuldu.
+- style: HTML kodu genelinde satır boşlukları ve girintiler "Clean Code" standartlarına uygun olarak düzenlendi.
+
+ contact.html | 424 ++++++++++++++++++++++++++++++++++-------------------------
+ 1 file changed, 247 insertions(+), 177 deletions(-)
+
+[049d685] 04.06.2026 22:11 | Yazar: orhan | Mesaj:
+refactor(faq): ortak UI bileşenleri faq.html sayfasına senkronize edildi
+
+Detaylar:
+- Navbar: Üst menü (d-flex, gap-2) 3'lü buton sistemi (Giriş, Gönüllü Ol, Hesabım) ve mobil menü KVKK linkiyle senkronize edildi.
+- Footer: Eski, hizasız alt bilgi modülü kaldırılarak; tipografik olarak optimize edilmiş (align-items-center) ve merkezi (Ballıca Kampüsü adresli) yeni footer modülü entegre edildi.
+- style: HTML kodu genelinde satır boşlukları düzenlendi, indentation (girinti) hataları giderilerek "Clean Code" yapısı korundu.
+
+ faq.html | 430 ++++++++++++++++++++++++++++++++++++---------------------------
+ 1 file changed, 244 insertions(+), 186 deletions(-)
+
+[c3463f3] 04.06.2026 22:10 | Yazar: orhan | Mesaj:
+refactor(instructor-details): ortak UI bileşenleri ins_details.html sayfasına senkronize edildi
+
+Detaylar:
+- Navbar: Üst menü ve mobil menü, projenin ana mimarisi olan 3'lü buton (Giriş, Gönüllü Ol, Hesabım) ve KVKK bağlantısı ile güncellendi.
+- Footer: Eski footer modülü, dikey hizalaması optimize edilmiş (align-items-center) ve güncel Ballıca Kampüsü adresini içeren modern footer ile değiştirildi.
+- UX Kararı: Gönüllü profil detaylarında dikkati profilde tutmak adına Paydaşlar (Partnerler) bölümü hariç tutuldu.
+- style: Kod bloğu genelinde boşluklar ve girintiler temizlenerek "Clean Code" standartlarına uygun hale getirildi.
+
+ ins_details.html | 422 +++++++++++++++++++++++++++++++------------------------
+ 1 file changed, 242 insertions(+), 180 deletions(-)
+
+[98d8906] 04.06.2026 22:09 | Yazar: orhan | Mesaj:
+refactor(instructor): ortak UI bileşenleri instructor.html sayfasına senkronize edildi
+
+Detaylar:
+- Navbar: Üst menü (d-flex, gap-2) 3'lü buton sistemi (Giriş, Gönüllü Ol, Hesabım) ve mobil menü KVKK linkiyle senkronize edildi.
+- Footer: Eski, hizasız alt bilgi modülü kaldırılarak; tipografik olarak optimize edilmiş (align-items-center) ve merkezi (Ballıca Kampüsü adresli) yeni footer modülü entegre edildi.
+- UX Kararı: Gönüllülerin öne çıktığı bu sayfada odak kaybını önlemek için Paydaşlar (Partnerler) bölümü hariç tutuldu.
+- style: Tüm belgedeki HTML etiketleri düzgün satır aralıkları ve okunabilir girinti (indentation) standartlarına uygun olarak formatlandı.
+
+ instructor.html | 704 ++++++++++++++++++++++++++++++--------------------------
+ 1 file changed, 379 insertions(+), 325 deletions(-)
+
+[ecb6555] 04.06.2026 22:07 | Yazar: orhan | Mesaj:
+refactor(blog-single): ortak UI bileşenleri blog_single.html sayfasına senkronize edildi
+
+Detaylar:
+- Navbar: Üst menü (d-flex, gap-2) 3'lü buton sistemi (Giriş, Gönüllü Ol, Hesabım) ve mobil menü KVKK linkiyle senkronize edildi.
+- Footer: Hizalamasız eski alt bilgi modülü kaldırılarak; tipografik olarak optimize edilmiş (align-items-center) ve merkezi (Ballıca Kampüsü adresli) yeni footer modülü entegre edildi.
+- UX Kararı: Hikaye detayı sayfasında odaklanmayı artırmak ve karmaşayı önlemek amacıyla Paydaşlar (Partnerler) bileşeni bu sayfadan hariç tutuldu.
+- style: HTML kodu genelinde satır boşlukları düzenlendi, indentation (girinti) hataları giderilerek "Clean Code" yapısı korundu.
+
+ blog_single.html | 459 +++++++++++++++++++++++++------------------------------
+ 1 file changed, 208 insertions(+), 251 deletions(-)
+
+[4a18eb9] 04.06.2026 22:06 | Yazar: orhan | Mesaj:
+refactor(blog): haberler sayfasına ortak UI bileşenleri entegre edildi
+
+Detaylar:
+- Navbar: Üst menü (d-flex, gap-2) 3'lü buton sistemi (Giriş, Gönüllü Ol, Hesabım) ve mobil menü KVKK linkiyle senkronize edildi.
+- Partners: Sayfanın kurumsal algısını artırmak için haber kartlarının hemen altına Nizami Paydaşlar (Partnerler) bileşeni eklendi.
+- Footer: Hizalamasız eski alt bilgi değiştirilerek, mükemmel dikey ortalamaya sahip (align-items-center) güncel Ballıca Kampüsü adresli footer modülü sayfaya dahil edildi.
+- style: HTML kodu genelinde satır boşlukları düzenlendi, indentation (girinti) hataları giderilerek "Clean Code" yapısı korundu.
+
+ blog.html | 472 ++++++++++++++++++++++++++++++++++++++------------------------
+ 1 file changed, 287 insertions(+), 185 deletions(-)
+
+[53e2c70] 04.06.2026 22:04 | Yazar: orhan | Mesaj:
+refactor(course-details): ortak UI bileşenleri course_details.html sayfasına senkronize edildi
+
+Detaylar:
+- Navbar: Üst menü ve mobil menü, ana mimari ile uyumlu 3'lü buton yapısına (Giriş, Gönüllü Ol, Hesabım) ve KVKK bağlantısına güncellendi.
+- Footer: Eski alt bilgi modülü kaldırılarak, simetrik hizalamaya sahip (align-items-center) ve güncel adres (Ballıca Kampüsü) bilgisini içeren yeni footer eklendi.
+- UX Kararı: Kullanıcı odaklanmasını dağıtmamak ve sade bir okuma deneyimi sunmak amacıyla "Paydaşlar (Partnerler)" modülü bu detay sayfasından kasıtlı olarak hariç tutuldu.
+- style: Genel kod okunabilirliğini artırmak için girintiler ve boşluklar "Clean Code" standartlarına uygun olarak formatlandı.
+
+ course_details.html | 506 ++++++++++++++++++++++++++++++----------------------
+ 1 file changed, 288 insertions(+), 218 deletions(-)
+
+[7569fb8] 04.06.2026 22:01 | Yazar: orhan | Mesaj:
+refactor(course): ortak UI bileşenleri course.html sayfasına senkronize edildi
+
+Detaylar:
+- Navbar: Etkinlikler ve Talepler sayfasının üst menüsü (d-flex, gap-2) güncel 3'lü buton mimarisi ve KVKK linkli mobil menü ile senkronize edildi.
+- Partners: Sayfa mimarisini güçlendirmek amacıyla; diğer sayfalarda bulunan Nizami Paydaşlar (Partnerler) modülü bu sayfaya da eklendi.
+- Footer: Eski, hizasız alt bilgi alanı tamamen kaldırılarak; tipografik olarak optimize edilmiş (align-items-center) ve merkezi olarak güncellenen (Ballıca Kampüsü) yeni footer modülü projeye dahil edildi.
+- style: Kart hizalamaları ve kod blokları, "Clean Code" standartlarına uygun olarak satır aralıkları düzenlenerek formatlandı.
+
+ about.html  |  30 ----
+ course.html | 520 ++++++++++++++++++++++++++++++++++--------------------------
+ 2 files changed, 295 insertions(+), 255 deletions(-)
+
+[c0146c5] 04.06.2026 21:57 | Yazar: orhan | Mesaj:
+refactor(about): ortak UI bileşenleri about.html sayfasına senkronize edildi
+
+Detaylar:
+- Navbar: Masaüstü görünümdeki 3'lü buton yapısı (Flexbox, d-flex, gap-2) ve mobil menü KVKK linkiyle birlikte entegre edildi.
+- Partners: Sayfa sonuna, index.html'deki ile birebir aynı olan, justify-content-between hizalamalı, eşit boşluklu Nizami Paydaşlar modülü eklendi.
+- Footer: Eski footer kaldırılarak; tipografik hizalama (align-items-center), hover okları ve yeni adres formatı içeren merkezi alt bilgi modülü projeye dahil edildi.
+- style: Tüm belgedeki HTML etiketleri düzgün satır aralıkları ve okunabilir girinti (indentation) standartlarına uygun olarak formatlandı.
+
+ about.html | 645 ++++++++++++++++++++++++++++++++++++-------------------------
+ 1 file changed, 383 insertions(+), 262 deletions(-)
+
+[9869331] 04.06.2026 21:46 | Yazar: orhan | Mesaj:
+feat/fix(ui): footer hizalamaları, kvkk sayfası ve paydaş logoları optimize edildi
+
+Detaylar:
+
+- fix(footer): Alt bilgi (footer) alanındaki tipografik kaymalar ve ikon hizalama sorunları giderildi. Flexbox (align-items-center) ile iletişim ikonları metinlerin dikey merkezine sabitlendi ve 3 sütunlu yapı justify-content-between ile ekrana eşit dağıtıldı.
+
+- feat(pages): Yüksek okunabilirlik (A11y) standartlarına sahip kvkk.html (Kişisel Verilerin Korunması) sayfası oluşturuldu ve evrensel footer bağlantılarına entegre edildi.
+
+- style(partners): Paydaşlar (Partnerler) alanındaki logoların boyut dengesizliği ve sağ taraftaki boşluk problemi çözüldü.
+
+- Logolar arası boşluklar w-100 ve justify-content-between ile eşitlendi, kurumsal bütünlük için kalıcı renklerine döndürüldü. Optik dengeyi sağlamak amacıyla AR-GE topluluğu logosu transform: scale(1.3) ile hacimlendirildi.
+
+ assets/my-img/logo1.png | Bin 0 -> 145056 bytes
+ assets/my-img/logo2.png | Bin 0 -> 78160 bytes
+ assets/my-img/logo3.png | Bin 0 -> 72211 bytes
+ index.html              | 130 +++++++++++++++-------
+ kvkk.html               | 286 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 378 insertions(+), 38 deletions(-)
+
+[e5192fe] 04.06.2026 20:10 | Yazar: orhan | Mesaj:
+feat(ui): kullanıcı giriş ve monolitik hesap paneli sayfaları entegre edildi
+
+Detaylar:
+
+- girisYap.html sayfası, kurumsal renk paletine ve erişilebilirlik (A11y) kurallarına uygun olarak sisteme eklendi.
+
+- fix(navbar): Üst menüdeki Eyleme Çağrı (CTA) butonlarının ekranı daraltması ve taşması sorunu, CSS Flexbox (d-flex, gap-2) mimarisi ile çözülerek görsel hiyerarşi sağlandı.
+- hesabim.html (Kullanıcı Paneli) sayfası, sekmeli yapı yerine modern UX standartlarına uygun monolitik (tek sayfa kaydırma) mimariyle sıfırdan kodlandı.
+
+- Profil kimlik alanı genişletildi (myFoto.jpg entegrasyonu) ve oyunlaştırma (gamification) dinamiklerini barındıran rozet/kazanım kartları arayüze işlendi.
+
+- Aktif görev takibi, faaliyet geçmişi ve hesap ayarları modülleri, kullanıcı yorgunluğunu azaltacak 'soft-card' tasarım deseniyle yapılandırıldı.
+
+ assets/my-img/myFoto.jpg | Bin 0 -> 137933 bytes
+ girisYap.html            | 199 +++++++++++++++++++
+ hesabim.html             | 503 +++++++++++++++++++++++++++++++++++++++++++++++
+ index.html               |  17 +-
+ 4 files changed, 714 insertions(+), 5 deletions(-)
+
+[e07a0f8] 02.06.2026 22:13 | Yazar: orhan | Mesaj:
+style: arayüz görsel hiyerarşi ve tasarım standartlarının revizyonu
+
+- Kullanıcı arayüzündeki (UI) görsel kart yapıları için CSS konteyner ve responsive tasarım düzenlemeleri gerçekleştirildi.
+
+- Görsel taşma sorunlarını gidermek adına `object-fit: cover` ve `object-position: center` standartları tüm görsel varlıklara (assets) uygulandı.
+
+- Proje genel tasarım diliyle uyumlu font ve tipografi hiyerarşisi revize edildi.
+
+- Etkinlik ve blog sayfalarına ait görsel varlıklar, kurumsal kimliğe uygun olarak optimize edilerek proje dizinine entegre edildi.
+
+- Arayüz bileşenlerindeki (card-deck) görsel hizalama ve oranlama standartları iyileştirildi.
+
+ 404.html                  |   4 +-
+ about.html                |   6 +--
+ assets/css/style.css      |   2 +-
+ assets/my-img/foto10.jpg  | Bin 0 -> 163135 bytes
+ assets/my-img/foto11.jpeg | Bin 0 -> 33988 bytes
+ assets/my-img/foto12.jpeg | Bin 0 -> 138198 bytes
+ assets/my-img/foto13.jpeg | Bin 0 -> 164783 bytes
+ assets/my-img/foto14.jpeg | Bin 0 -> 146743 bytes
+ assets/my-img/foto15.jpeg | Bin 0 -> 159510 bytes
+ assets/my-img/foto7.jpeg  | Bin 0 -> 139223 bytes
+ assets/my-img/foto8.jpeg  | Bin 0 -> 145212 bytes
+ assets/my-img/foto9.jpeg  | Bin 0 -> 132904 bytes
+ blog.html                 |  18 +++----
+ blog_single.html          |  10 ++--
+ contact.html              |   4 +-
+ course.html               |  16 +++---
+ course_details.html       |  10 ++--
+ faq.html                  |   4 +-
+ index.html                | 121 ++++++++++++++++++++++++++++++----------------
+ ins_details.html          |   4 +-
+ instructor.html           |  20 ++++----
+ thank-you.html            |   4 +-
+ 22 files changed, 131 insertions(+), 92 deletions(-)
+
+[0a5cb91] 01.06.2026 20:29 | Yazar: orhan | Mesaj:
+all html pages (update)
+
+style(ui): ana sayfa görselleri, tipografi ve içerik metinleri projeye özgü hale getirildi
+
+- Hero alanı, Hakkımızda (SKA) ve Etkinlik kartlarındaki standart stok fotoğraflar, projenin 'Nesiller Arası Dayanışma' ruhunu yansıtan özel görsellerle değiştirildi.
+
+- Video arka planına CSS üzerinden karanlık overlay (linear-gradient) ve derinlik (parallax) efekti eklenerek metin okunabilirliği ve UX kalitesi artırıldı.
+
+- Sitenin genelindeki font yapıları ve içerik metinleri, hedef kitleye (50+ yaş) ve akademik standartlara daha uygun, okunabilir bir yapıya kavuşturuldu.
+
+ about.html               |  20 ++++++++++--------
+ assets/my-img/foto.png   | Bin 0 -> 413245 bytes
+ assets/my-img/foto2.jpg  | Bin 0 -> 43510 bytes
+ assets/my-img/foto3.jpeg | Bin 0 -> 141545 bytes
+ assets/my-img/foto4.jpeg | Bin 0 -> 199185 bytes
+ assets/my-img/foto5.jpeg | Bin 0 -> 148318 bytes
+ assets/my-img/foto6.jpg  | Bin 0 -> 213598 bytes
+ blog.html                |  14 ++++++-------
+ course.html              |   2 +-
+ faq.html                 |   9 ++++++--
+ index.html               |  52 +++++++++++++++++++++++++----------------------
+ instructor.html          |  20 ++++++++++--------
+ 12 files changed, 67 insertions(+), 50 deletions(-)
+
+[e38753b] 01.06.2026 14:55 | Yazar: orhan | Mesaj:
+all html pages (update)
+
+feat(ui): ana menü ve preloader alanlarına 'Gönül Köprüsü' kurumsal logosu entegre edildi
+
+- Projenin marka kimliğini güçlendirmek amacıyla Navbar ve Preloader (Yükleme Ekranı) alanları FontAwesome 'fa-solid fa-hand-holding-heart' (Avuç İçinde Kalp) ikonu ile zenginleştirildi.
+
+- İkon ve logo metninin dikey eksende milimetrik olarak hizalanması için esnek yerleşim (display: flex, align-items: center) mimarisi kullanılarak UI/UX kalitesi ve mobil uyumluluk (responsive) sağlandı.
+
+- Görsel hiyerarşiyi korumak adına ikon rengi projenin enerji turuncusuna (#ff7b00) kilitlendi.
+
+ 404.html            | 13 +++++++++----
+ about.html          | 13 +++++++++----
+ blog.html           | 13 +++++++++----
+ blog_single.html    | 13 +++++++++----
+ contact.html        | 13 +++++++++----
+ course.html         | 13 +++++++++----
+ course_details.html | 13 +++++++++----
+ faq.html            | 13 +++++++++----
+ index.html          | 13 +++++++++----
+ ins_details.html    | 13 +++++++++----
+ instructor.html     | 13 +++++++++----
+ thank-you.html      | 13 +++++++++----
+ 12 files changed, 108 insertions(+), 48 deletions(-)
+
+[2a19d72] 01.06.2026 14:28 | Yazar: orhan | Mesaj:
+all html pages (update)
+
+feat(ui): standart preloader 'Gönül Köprüsü' kurumsal animasyonlu logosuna dönüştürüldü
+
+- Kullanıcı deneyimini (UX) ve 50 yaş üstü erişilebilirliğini (A11y) artırmak amacıyla, belirsiz yükleme çarkı yerine CSS ile kodlanmış 'Avuç İçinde Kalp' (hand-holding-heart) ikonu entegre edildi.
+
+- İkona '@keyframes' kullanılarak psikolojik olarak rahatlatıcı 'Kalp Atışı (Pulse)' animasyonu eklendi.
+
+- Yükleme ekranı, markanın Güven Mavisi ve Enerji Turuncusu renk paletine göre yeniden tasarlandı.
+
+ 404.html                            | 11 +++++--
+ about.html                          | 11 +++++--
+ assets/css/gonul-koprusu-custom.css | 62 +++++++++++++++++++++++++++++++++++++
+ blog.html                           | 11 +++++--
+ blog_single.html                    | 11 +++++--
+ contact.html                        | 11 +++++--
+ course.html                         | 11 +++++--
+ course_details.html                 | 11 +++++--
+ faq.html                            | 11 +++++--
+ index.html                          | 11 +++++--
+ ins_details.html                    | 11 +++++--
+ instructor.html                     | 11 +++++--
+ thank-you.html                      | 11 +++++--
+ 13 files changed, 170 insertions(+), 24 deletions(-)
+
+[bcf128c] 31.05.2026 01:53 | Yazar: orhan | Mesaj:
+contact.html
+
+fix(forms): contact.html iletişim formu arka uç (contact.php) rotasına bağlandı
+
+- İletişim formunun 'action' niteliği 'contact.php' olarak güncellenerek veri gönderim köprüsü aktif hale getirildi.
+
+- Arka uç betiğinin (backend script) zorunlu olarak beklediği 'email' parametresini karşılamak amacıyla, UI üzerindeki telefon numarası alanı 'E-Posta Adresiniz' olarak revize edildi.
+
+- Form mimarisindeki bu veri tipi değişikliği, mevcut tasarım (UI) ve kullanıcı deneyimi (UX) bütünlüğü korunarak sisteme entegre edildi.
+
+ contact.html | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+
+[3994332] 31.05.2026 01:48 | Yazar: orhan | Mesaj:
+thank-you.html and contact.php
+
+feat(forms): contact.php ve thank-you.html iletişim akışı güvenlik/UX standartlarına göre yapılandırıldı
+
+- contact.php dosyasına XSS koruması (sanitization) ve UTF-8 mail header entegrasyonu sağlandı.
+
+- Form gönderiminin başarıyla sonuçlanmasının ardından tetiklenen thank-you.html (Teşekkürler) sayfası, şablonun eski siyah/yeşil tasarımından arındırıldı.
+
+- thank-you.html dosyası 50 yaş üstü kitleye hitap eden güven verici (A11y) bir tasarımla revize edildi; evrensel Navbar, Footer ve CSS değişkenlerimiz (Gönül Köprüsü UI) sayfaya bağlandı.
+
+ contact.php    |  53 ++++++++++-----
+ thank-you.html | 205 +++++++++++++++++++++++++++++++++++++++------------------
+ 2 files changed, 178 insertions(+), 80 deletions(-)
+
+[d0841f3] 31.05.2026 01:30 | Yazar: orhan | Mesaj:
+404.html
+
+feat(pages): 404.html hata sayfası 'Empatik Kullanıcı Yönlendirme Modülü'ne dönüştürüldü
+
+- Şablondaki teknik (jargon içeren) 404 hata mesajları kaldırılarak, 50 yaş üstü hedef kitleyi paniğe sürüklemeyecek psikolojik olarak rahatlatıcı metinler ('Sanırım Yolumuzu Kaybettik' vb.) eklendi.
+
+- Kullanıcıyı boşlukta bırakmamak adına, doğrudan 'Ana Sayfa' ve 'İletişim' sayfalarına yönlendiren belirgin (A11y) Call-to-Action butonları sisteme entegre edildi.
+
+- Güncel evrensel navbar (S.S.S. dahil) ve footer mimarisi sayfaya başarıyla uygulandı.
+
+ 404.html | 409 +++++++++++++++++++++------------------------------------------
+ 1 file changed, 136 insertions(+), 273 deletions(-)
+
+[3d1c540] 31.05.2026 01:24 | Yazar: orhan | Mesaj:
+faq.html and other pages souters updates
+
+feat(pages): faq.html sayfası 'Güven Merkezi ve S.S.S.' modülüne dönüştürüldü
+
+- Eğitim şablonundaki standart akordeon içerikleri tamamen silinerek, Gönül Köprüsü iş mantığına (KVKK, Ücretlendirme, Güvenlik Taraması) uygun 5 kritik soru-cevap eklendi.
+
+- A11y (Erişilebilirlik) standartları gereği akordeon soru başlıkları koyu lacivert (primary-blue), cevap kısımları ise okunabilirliği artıran #f8f9fa zemin üzerine konumlandırıldı.
+
+- Şablondaki sağ kenar (sidebar) görsel alanı, 50 yaş üstü hedef kitleyi doğrudan iletişime geçmeye teşvik eden dinamik 'Destek ve Yardım (CTA)' panosu ile değiştirildi.
+
+- Evrensel routing düzeltmeleri ve Footer bağlantıları sisteme entegre edildi.
+
+- fix(nav): faq.html (Sıkça Sorulan Sorular) sayfası ana menüye (Navbar) eklendi.
+
+- Kullanıcıların iletişim formuna gitmeden önce güven ve işleyiş sorularına yanıt bulabilmesi için S.S.S. linki İletişim sekmesinin hemen önüne konumlandırıldı." -m "- UX sadeliğini korumak adına Footer alanına müdahale edilmedi.
+
+ about.html          |   8 +-
+ blog.html           |   8 +-
+ blog_single.html    |   8 +-
+ contact.html        |   8 +-
+ course.html         |   8 +-
+ course_details.html |   8 +-
+ faq.html            | 544 ++++++++++++++++++++--------------------------------
+ index.html          |   8 +-
+ ins_details.html    |   8 +-
+ instructor.html     |   8 +-
+ 10 files changed, 258 insertions(+), 358 deletions(-)
+
+[baf56af] 31.05.2026 01:10 | Yazar: orhan | Mesaj:
+instructor.html (update)
+
+fix(ui): instructor.html sayfasındaki gönüllü kartlarına güvenli tıklanabilirlik eklendi
+
+- Gönüllü profillerine ait img ve h3 etiketleri, CSS flex/grid mimarisini bozmayacak şekilde <a> etiketleri ile sarılarak detay sayfasına bağlandı.
+
+- Erişilebilirlik ve tasarım bütünlüğünü korumak adına linklere 'text-decoration: none' ve 'color: inherit' kuralları inline olarak uygulandı.
+
+ instructor.html | 56 ++++++++++++++++++++++++++++++++++++++------------------
+ 1 file changed, 38 insertions(+), 18 deletions(-)
+
+[4c37c3a] 31.05.2026 01:09 | Yazar: orhan | Mesaj:
+ins_details.html
+
+feat(components): ins_details.html şablonu dinamik 'Gönüllü Profil Bileşeni'ne dönüştürüldü
+
+- Eğitim şablonundaki eğitmen profil kartı, Gönül Köprüsü iş mantığına uygun olarak 'Aktif Saha Gönüllüsü' profiline revize edildi.
+
+- 50 yaş üstü hedef kitlenin güvenini kazanmak amacıyla 'Tamamlanan Görev', 'Aktif Bölge' ve 'Uygunluk Durumu'nu gösteren erişilebilir (A11y) istatistik panosu eklendi.
+
+- Gönüllülerin yetkinliklerini şeffafça sunmak için Bootstrap badge tabanlı 'Yetkinlikler ve Rozetler' sistemi (İlk Yardım Eğitimi, Hastane Refakati vb.) oluşturuldu.
+
+- Profilden doğrudan aksiyon alınabilmesi için form sayfasına (contact.html) bağlanan 'Bu Gönüllüden Destek İste' Call-to-Action (CTA) butonu entegre edildi.
+
+- Güncel evrensel navbar ve footer mimarisi sayfaya başarıyla uygulandı.
+
+ ins_details.html | 479 ++++++++++++++++++++++---------------------------------
+ 1 file changed, 194 insertions(+), 285 deletions(-)
+
+[3af7794] 31.05.2026 00:47 | Yazar: orhan | Mesaj:
+blog_single.html
+
+feat(pages): blog_single.html sayfası 'Hikaye Detay ve Gönüllü Panosu'na dönüştürüldü
+
+- Şablondaki karmaşık makale düzeni temizlendi, hikaye metni A11y (Erişilebilirlik) standartlarına uygun hale getirilerek font okunabilirliği optimize edildi.
+- Yazar (Author) modülü, projenin iş mantığına uygun olarak 'Gönüllü Yazarımız' profiliyle değiştirildi.
+
+- Yorum alanı (Comments) ve iletişim formundaki metinler/yer tutucular (placeholder) Türkçeleştirilerek sisteme entegre edildi.
+
+- Kenar çubuğundaki (Sidebar) anlamsız reklam (Ad Banner) alanı kaldırılarak, hedef kitleyi harekete geçirecek 'Bir Hayata Dokunun (Gönüllü Ol CTA)' panosu tasarlandı.
+
+- Kenar çubuğu widget'ları (Arama, Kategoriler, Son Haberler) Gönül Köprüsü veri iskeletine uygun olarak güncellendi.
+
+- Evrensel Menü ve Footer bağlantıları eksiksiz biçimde eklendi.
+
+- fix(links): blog.html üzerindeki ölü bağlantılar blog_single.html detay sayfasına bağlandı
+
+ blog.html        |  24 +-
+ blog_single.html | 690 +++++++++++++++++++++----------------------------------
+ 2 files changed, 273 insertions(+), 441 deletions(-)
+
+[205a582] 31.05.2026 00:36 | Yazar: orhan | Mesaj:
+blog.html
+
+feat(pages): blog.html şablonu 'Haberler ve Başarı Hikayeleri' panosuna dönüştürüldü
+
+- Standart eğitim makalesi gridleri (kartları), Gönül Köprüsü iş mantığına (business logic) uyarlanarak 'Başarı Hikayesi, Duyuru, Rehber, Gönüllü Günlüğü' gibi dinamik kategorilere ayrıştırıldı.
+
+- 50 yaş üstü kullanıcılar için okunabilirlik (A11y) standartları artırıldı; kart iç boşlukları (padding) ve font kontrastları (muted text / primary title) iyileştirildi.
+
+- İleride API (PostgreSQL/React) bağlantısı yapılacağı öngörülerek sayfanın en altına Bootstrap tabanlı Sayfalama (Pagination) modülü entegre edildi.
+
+- Güncel evrensel navbar (Gönüllülerimiz linki dahil) ve footer mimarisi sayfaya başarıyla uygulandı.
+
+- Kullanıcıların başarı hikayeleri ve proje duyurularına ulaşabilmesi için blog.html sayfası ana routing ağına (main-menu, mobile_menu ve footer) dahil edildi.
+
+- Navigasyon menüsü, projenin büyüyen modüler yapısına uygun olarak güncellendi.
+
+ about.html          |  10 +-
+ blog.html           | 520 ++++++++++++++++++++--------------------------------
+ contact.html        |   6 +-
+ course.html         |  10 +-
+ course_details.html |  10 +-
+ index.html          |   8 +-
+ instructor.html     |  10 +-
+ 7 files changed, 230 insertions(+), 344 deletions(-)
+
+[711ed44] 30.05.2026 23:57 | Yazar: orhan | Mesaj:
+instructor.html
+
+feat(pages): instructor.html şablonu 'Kahraman Gönüllülerimiz' topluluk profiline dönüştürüldü
+
+- Eğitim şablonundaki eğitmen (instructor) kartları, projenin topluluk odaklı mimarisine uyarlanarak tamamlanan görev sayısı ve yetkinlik belirten (Saha Gönüllüsü) profillere çevrildi.
+
+- Sistem iş mantığı (business logic) gereği 'Gönüllü Olma Adımları' (Kayıt, Oryantasyon, Eşleşme, Saha) bölümü tasarlandı.
+
+- Testimonial (Yorum) modülü, projenin şeffaflığını artırmak adına sahadaki gönüllülerin gerçekçi deneyim hikayeleriyle revize edildi.
+
+- İstatistik sayaçları (counters) gönüllü mesaisi, sertifikalı lider ve aktif bölge metriklerine entegre edildi.
+
+- Evrensel routing düzeltmeleri (about.html) ve kurumsal CSS mimarisi dosyaya dahil edildi.
+
+ about.html          |   5 +-
+ contact.html        |   5 +-
+ course.html         |   5 +-
+ course_details.html |   5 +-
+ index.html          |   5 +-
+ instructor.html     | 670 +++++++++++++++++++++++++---------------------------
+ 6 files changed, 343 insertions(+), 352 deletions(-)
+
+[cb99817] 30.05.2026 23:37 | Yazar: orhan | Mesaj:
+about.html
+
+feat(pages): about.html sayfası 'Proje Manifestosu ve Kurumsal Kimlik' panosuna dönüştürüldü
+
+- Eğitim kurumu şablonu tamamen temizlenerek, projenin temel dayanağı olan BM Sürdürülebilir Kalkınma Amaçları (SKA 3, 10, 11, 17) sayfaya entegre edildi.
+
+- Sistem şeffaflığını artırmak adına 'Güven ve Şeffaflık İlkelerimiz' (Gönüllü Taraması, Veri Gizliliği vb.) bölümü oluşturuldu.
+
+- Sayfa içerisindeki sayaçlar (counters) index.html ile senkronize edildi ve hedef kitleye yönelik ikili Call-to-Action (Gönüllü Ol / Destek İste) panoları geliştirildi.
+
+- Yorum alanı (Testimonials) sosyal kanıt oluşturmak amacıyla 50+ yaş kullanıcılar ve gönüllü öğrencilerin kurgusal geri bildirimleriyle revize edildi.
+
+- Navbar, Footer ve özel CSS mimarisi evrensel standartlara uygun hale getirildi.
+
+ about.html          | 765 ++++++++++++++++++----------------------------------
+ contact.html        |   4 +-
+ course.html         |   4 +-
+ course_details.html |   4 +-
+ index.html          |   4 +-
+ 5 files changed, 275 insertions(+), 506 deletions(-)
+
+[77707fa] 30.05.2026 23:23 | Yazar: orhan | Mesaj:
+course_details.html
+
+feat(pages): course_details.html dinamik 'Talep ve Etkinlik Detayı' sayfasına dönüştürüldü
+
+- Şablondaki eğitim müfredatı ve fiyatlandırma modülleri temizlenerek, sosyal sorumluluk mantığına uygun 'Talep Özeti' ve 'Gönüllülük Esası' widget'ları (sidebar) geliştirildi.
+
+- İçerik sekmeleri (Tabs), ileride PostgreSQL veritabanından çekilecek dinamik yapıya uyumlu hale getirilerek 'Talep Açıklaması', 'Gönüllü Kriterleri' ve 'Saha Koordinatörü' olarak yeniden yapılandırıldı.
+
+- 50 yaş üstü erişilebilirliği ve gönüllü aksiyonunu (CTA) maksimize etmek için büyük 'Bu Talebi Üstlen' butonları contact.html (form) rotasına bağlandı.
+
+- A11y (Erişilebilirlik) standartları gereği zıt renk rozetleri (badge) ve font okunaklılığı güncellendi.
+
+ course_details.html | 792 +++++++++++++++-------------------------------------
+ 1 file changed, 225 insertions(+), 567 deletions(-)
+
+[2408b93] 30.05.2026 23:16 | Yazar: orhan | Mesaj:
+course.html
+
+feat(pages): course.html şablonu dinamik etkinlik ve talep listesi modülüne dönüştürüldü
+
+- Varsayılan eğitim kartları, 'Sosyal Etkinlik', 'Acil Talep' ve 'Atölye' gibi veri mantığına uygun kategorik kartlara (badges) ayrıştırıldı.
+
+- İleride eklenecek API veya veritabanı entegrasyonu (React/Flutter) için Bootstrap tabanlı Sayfalama (Pagination) modülü entegre edildi.
+
+- Kullanıcıların verileri rahatça filtreleyebilmesi adına arama ve kategori seçimi barındıran dinamik bir filtreleme arayüzü (UX) tasarlandı.
+
+- Navbar, Footer ve CSS bağlantıları (gonul-koprusu-custom.css) evrensel mimari standartlarına göre güncellenerek sayfa yayına alındı.
+
+ course.html | 576 +++++++++++++++++++++++++-----------------------------------
+ 1 file changed, 236 insertions(+), 340 deletions(-)
+
+[c371a9b] 30.05.2026 23:14 | Yazar: orhan | Mesaj:
+contact.html
+
+feat(pages): contact.html destek ve gönüllü başvuru merkezine dönüştürüldü
+
+- İletişim şablonu, 50+ yaş erişilebilirliğini artırmak adına 'Alo Destek Hattı' gibi devasa tipografik veri kartlarıyla yeniden modellendi.
+
+- Statik iletişim formu, 'Konu Seçimi' (Destek Talebi / Gönüllü Başvurusu) dropdown'ı eklenerek projenin iş mantığına (business logic) uygun dinamik bir yapıya kavuşturuldu.
+
+- Form alanları (input) A11y standartları gereği büyütüldü (form-control-lg).
+
+- Google Maps iframe lokasyonu projenin merkezi olan Samsun koordinatları ile güncellendi.
+
+- Navbar ve Footer bileşenleri, index.html mimarisiyle %100 eşzamanlı (DRY) hale getirildi.
+
+ contact.html | 505 +++++++++++++++++++++--------------------------------------
+ 1 file changed, 179 insertions(+), 326 deletions(-)
+
+[34cf11f] 30.05.2026 23:11 | Yazar: orhan | Mesaj:
+gonul-koprusu-custom.css
+
+style: projenin ana renk paleti ve erişilebilirlik (a11y) kuralları uygulandı
+
+- Global CSS değişkenleri (root) ile projenin kurumsal renkleri (Güven Mavisi ve Enerji Turuncusu) sisteme entegre edildi.
+
+- 50 yaş üstü kullanıcılar için tipografi, satır aralığı ve okunabilirlik (A11y) standartları artırıldı.
+
+- Şablonun ve Bootstrap 5'in varsayılan buton (btn_one) ile kart (single_tp) tasarımları Gönül Köprüsü UI kimliğine göre harici bir dosyadan (override edilerek) yeniden modellendi.
+
+ assets/css/gonul-koprusu-custom.css | 149 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 149 insertions(+)
+
+[8ee99ef] 30.05.2026 23:09 | Yazar: orhan | Mesaj:
+index.html
+
+feat(core): eduleb eğitim şablonu gönül köprüsü sosyal platformuna uyarlandı
+
+- Ana sayfa (Hero) bölümü 50 yaş üstü hedef kitleye uygun erişilebilir (A11y) CTA butonlarıyla ('Destek Talebi' ve 'Gönüllü Ol') tamamen yenilendi.
+
+- Sürdürülebilir Kalkınma Amaçları (SKA 3, 10, 11, 17) vizyonu, proje hedefleri arasına entegre edildi.
+- Karmaşık eğitim şablonu modülleri temizlenerek, sosyal dayanışma iş mantığına uygun hizmet kartları (Alışveriş, Refakat vb.) oluşturuldu.
+
+- İleride geliştirilecek React ve Flutter projeleri için HTML iskeleti içerisine component sınırlarını belirten modüler yorum satırları yerleştirildi.
+
+- Sayfalar arası yönlendirme (routing) sorunları çözülerek evrensel menü bağlantıları sağlandı.
+
+ index.html | 1127 +++++++++++++++++-------------------------------------------
+ 1 file changed, 313 insertions(+), 814 deletions(-)
+
+[bac47e2] 27.05.2026 05:05 | Yazar: orhan | Mesaj:
+first commit
+
+ 404.html                                   |  279 +++
+ README.md                                  |   25 +
+ about.html                                 |  504 +++++
+ assets/bootstrap/css/bootstrap.min.css     |    6 +
+ assets/bootstrap/js/bootstrap.min.js       |    7 +
+ assets/css/animate.css                     | 3303 ++++++++++++++++++++++++++++
+ assets/css/jquery-simple-mobilemenu.css    |  176 ++
+ assets/css/magnific-popup.css              |  351 +++
+ assets/css/style.css                       | 2800 +++++++++++++++++++++++
+ assets/fonts/FontAwesome.otf               |  Bin 0 -> 134808 bytes
+ assets/fonts/font-awesome.css              | 2337 ++++++++++++++++++++
+ assets/fonts/font-awesome.css.map          |    7 +
+ assets/fonts/font-awesome.min.css          |    4 +
+ assets/fonts/fontawesome-webfont.eot       |  Bin 0 -> 165742 bytes
+ assets/fonts/fontawesome-webfont.svg       | 2671 ++++++++++++++++++++++
+ assets/fonts/fontawesome-webfont.ttf       |  Bin 0 -> 165548 bytes
+ assets/fonts/fontawesome-webfont.woff      |  Bin 0 -> 98024 bytes
+ assets/fonts/fontawesome-webfont.woff2     |  Bin 0 -> 77160 bytes
+ assets/fonts/themify-icons.css             | 1081 +++++++++
+ assets/fonts/themify.eot                   |  Bin 0 -> 78748 bytes
+ assets/fonts/themify.svg                   |  362 +++
+ assets/fonts/themify.ttf                   |  Bin 0 -> 78584 bytes
+ assets/fonts/themify.woff                  |  Bin 0 -> 56108 bytes
+ assets/img/404.svg                         |    9 +
+ assets/img/about1.png                      |  Bin 0 -> 773299 bytes
+ assets/img/about3.png                      |  Bin 0 -> 442746 bytes
+ assets/img/app-store.jpg                   |  Bin 0 -> 10275 bytes
+ assets/img/back.png                        |  Bin 0 -> 419 bytes
+ assets/img/bg/home-bg.jpg                  |  Bin 0 -> 33419 bytes
+ assets/img/bg/home-bg2.jpg                 |  Bin 0 -> 482561 bytes
+ assets/img/bg/home-bg3.jpg                 |  Bin 0 -> 67932 bytes
+ assets/img/bg/section-2.jpg                |  Bin 0 -> 327115 bytes
+ assets/img/bg/section-3.jpg                |  Bin 0 -> 553979 bytes
+ assets/img/bg/section-top.jpg              |  Bin 0 -> 1383489 bytes
+ assets/img/bg/shape-1.png                  |  Bin 0 -> 105336 bytes
+ assets/img/bg/video.jpg                    |  Bin 0 -> 825904 bytes
+ assets/img/blog/1.jpg                      |  Bin 0 -> 36608 bytes
+ assets/img/blog/2.jpg                      |  Bin 0 -> 30102 bytes
+ assets/img/blog/3.jpg                      |  Bin 0 -> 41561 bytes
+ assets/img/blog/4.jpg                      |  Bin 0 -> 34171 bytes
+ assets/img/blog/5.jpg                      |  Bin 0 -> 34066 bytes
+ assets/img/blog/6.jpg                      |  Bin 0 -> 39025 bytes
+ assets/img/blog/author.jpg                 |  Bin 0 -> 14734 bytes
+ assets/img/blog/banner.jpg                 |  Bin 0 -> 12464 bytes
+ assets/img/blog/blog-1.png                 |  Bin 0 -> 175190 bytes
+ assets/img/blog/blog-2.png                 |  Bin 0 -> 197441 bytes
+ assets/img/blog/blog-3.png                 |  Bin 0 -> 186116 bytes
+ assets/img/blog/blog-4.png                 |  Bin 0 -> 172996 bytes
+ assets/img/blog/blog-5.png                 |  Bin 0 -> 211659 bytes
+ assets/img/blog/c1.jpg                     |  Bin 0 -> 12188 bytes
+ assets/img/blog/c2.jpg                     |  Bin 0 -> 9654 bytes
+ assets/img/blog/c3.jpg                     |  Bin 0 -> 11667 bytes
+ assets/img/cat1.jpg                        |  Bin 0 -> 67708 bytes
+ assets/img/cat2.jpg                        |  Bin 0 -> 91241 bytes
+ assets/img/cat3.jpg                        |  Bin 0 -> 55865 bytes
+ assets/img/cat4.jpg                        |  Bin 0 -> 64652 bytes
+ assets/img/cat5.jpg                        |  Bin 0 -> 64256 bytes
+ assets/img/cat6.jpg                        |  Bin 0 -> 68034 bytes
+ assets/img/cat7.jpg                        |  Bin 0 -> 84525 bytes
+ assets/img/cat8.jpg                        |  Bin 0 -> 57881 bytes
+ assets/img/client02.png                    |  Bin 0 -> 27664 bytes
+ assets/img/client03.png                    |  Bin 0 -> 31029 bytes
+ assets/img/client04.png                    |  Bin 0 -> 28961 bytes
+ assets/img/clients/1.png                   |  Bin 0 -> 2216 bytes
+ assets/img/clients/2.png                   |  Bin 0 -> 2407 bytes
+ assets/img/clients/3.png                   |  Bin 0 -> 2127 bytes
+ assets/img/clients/4.png                   |  Bin 0 -> 2556 bytes
+ assets/img/clients/5.png                   |  Bin 0 -> 2478 bytes
+ assets/img/clients/6.png                   |  Bin 0 -> 5775 bytes
+ assets/img/course/1.png                    |  Bin 0 -> 377016 bytes
+ assets/img/course/2.png                    |  Bin 0 -> 297308 bytes
+ assets/img/course/3.png                    |  Bin 0 -> 380780 bytes
+ assets/img/course/4.png                    |  Bin 0 -> 412374 bytes
+ assets/img/course/5.png                    |  Bin 0 -> 131945 bytes
+ assets/img/course/6.png                    |  Bin 0 -> 181655 bytes
+ assets/img/course/star.png                 |  Bin 0 -> 1334 bytes
+ assets/img/e1.png                          |  Bin 0 -> 9497 bytes
+ assets/img/e2.png                          |  Bin 0 -> 7415 bytes
+ assets/img/e3.png                          |  Bin 0 -> 13233 bytes
+ assets/img/e4.png                          |  Bin 0 -> 13001 bytes
+ assets/img/e5.png                          |  Bin 0 -> 9747 bytes
+ assets/img/e6.png                          |  Bin 0 -> 9420 bytes
+ assets/img/e7.png                          |  Bin 0 -> 7637 bytes
+ assets/img/e8.png                          |  Bin 0 -> 10089 bytes
+ assets/img/e9.png                          |  Bin 0 -> 10055 bytes
+ assets/img/faq.jpg                         |  Bin 0 -> 21679 bytes
+ assets/img/fb.svg                          |    4 +
+ assets/img/free-course.png                 |  Bin 0 -> 578018 bytes
+ assets/img/google-play.jpg                 |  Bin 0 -> 11361 bytes
+ assets/img/home-img1.png                   |  Bin 0 -> 501793 bytes
+ assets/img/home-img2.png                   |  Bin 0 -> 669296 bytes
+ assets/img/ins-details.png                 |  Bin 0 -> 51063 bytes
+ assets/img/ins.svg                         |   18 +
+ assets/img/ins1.png                        |  Bin 0 -> 347687 bytes
+ assets/img/ins2.png                        |  Bin 0 -> 299691 bytes
+ assets/img/logo.png                        |  Bin 0 -> 2181 bytes
+ assets/img/next.png                        |  Bin 0 -> 433 bytes
+ assets/img/pn.svg                          |    4 +
+ assets/img/quote.png                       |  Bin 0 -> 4740 bytes
+ assets/img/rc-1.png                        |  Bin 0 -> 17036 bytes
+ assets/img/rc-2.png                        |  Bin 0 -> 15165 bytes
+ assets/img/rc-3.png                        |  Bin 0 -> 16327 bytes
+ assets/img/review.png                      |  Bin 0 -> 597628 bytes
+ assets/img/sc.png                          |  Bin 0 -> 536416 bytes
+ assets/img/team/team1.jpg                  |  Bin 0 -> 44808 bytes
+ assets/img/team/team2.jpg                  |  Bin 0 -> 36006 bytes
+ assets/img/team/team3.jpg                  |  Bin 0 -> 34364 bytes
+ assets/img/team/team4.jpg                  |  Bin 0 -> 28444 bytes
+ assets/img/testi.jpg                       |  Bin 0 -> 21679 bytes
+ assets/img/testimonial/1.png               |  Bin 0 -> 16274 bytes
+ assets/img/testimonial/2.png               |  Bin 0 -> 17036 bytes
+ assets/img/testimonial/3.png               |  Bin 0 -> 15165 bytes
+ assets/img/testimonial/4.png               |  Bin 0 -> 13520 bytes
+ assets/img/testimonial/5.png               |  Bin 0 -> 16327 bytes
+ assets/img/tw.svg                          |    4 +
+ assets/js/jquery-1.12.4.min.js             |    5 +
+ assets/js/jquery-simple-mobilemenu.js      |  104 +
+ assets/js/jquery.inview.min.js             |    1 +
+ assets/js/jquery.magnific-popup.min.js     |    4 +
+ assets/js/modernizr-2.8.3.min.js           |    4 +
+ assets/js/scripts.js                       |  107 +
+ assets/js/scrolltopcontrol.js              |   76 +
+ assets/js/superMarquee.min.js              |  107 +
+ assets/js/wow.min.js                       |    2 +
+ assets/owlcarousel/css/owl.carousel.css    |   71 +
+ assets/owlcarousel/css/owl.theme.css       |   80 +
+ assets/owlcarousel/css/owl.transitions.css |  163 ++
+ assets/owlcarousel/js/owl.carousel.js      | 1512 +++++++++++++
+ assets/owlcarousel/js/owl.carousel.min.js  |   47 +
+ blog.html                                  |  329 +++
+ blog_single.html                           |  436 ++++
+ contact.html                               |  332 +++
+ contact.php                                |   19 +
+ course.html                                |  347 +++
+ course_details.html                        |  581 +++++
+ faq.html                                   |  338 +++
+ index.html                                 |  820 +++++++
+ index2.html                                |  819 +++++++
+ ins_details.html                           |  294 +++
+ instructor.html                            |  353 +++
+ pricing.html                               |  372 ++++
+ thank-you.html                             |   67 +
+ 142 files changed, 21342 insertions(+)
