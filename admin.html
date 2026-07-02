@@ -4,286 +4,357 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Gönül Köprüsü - Yönetici Paneli">
-    <title>Yönetici Paneli | Gönül Köprüsü</title>
+    <meta name="description" content="Gönül Köprüsü - Yönetici (Admin) Paneli">
+    <title>Admin Paneli | Gönül Köprüsü</title>
     
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/jquery-simple-mobilemenu.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/gonul-koprusu-custom.css">
 
     <style>
-        body { background-color: #f1f5f9; } 
-        .soft-card { 
-            background: #ffffff; 
-            border: none; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03); 
-            overflow: hidden;
-            margin-bottom: 30px; 
+        body { background-color: #f4f6f9; font-family: 'DM Sans', sans-serif; }
+        .admin-sidebar {
+            width: 280px; 
+            background: linear-gradient(180deg, var(--gk-primary-blue) 0%, #112543 100%); 
+            color: white; 
+            min-height: 100vh;
+            display: flex; 
+            flex-direction: column;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+            z-index: 1000;
         }
-        .stat-card {
+        .admin-content {
+            margin-left: 280px;
             padding: 30px;
-            border-radius: 12px;
-            color: #fff;
-            position: relative;
-            overflow: hidden;
+            min-height: 100vh;
         }
-        .stat-card i {
-            position: absolute;
-            right: -10px;
-            bottom: -20px;
-            font-size: 100px;
-            opacity: 0.2;
-        }
-        .bg-gradient-blue { background: linear-gradient(135deg, var(--gk-primary-blue), #2a5298); }
-        .bg-gradient-orange { background: linear-gradient(135deg, var(--gk-secondary-orange), #ff9a44); }
-        .bg-gradient-green { background: linear-gradient(135deg, #10b981, #34d399); }
-        .bg-gradient-red { background: linear-gradient(135deg, #ef4444, #f87171); }
-        
-        .soft-input {
-            background-color: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            padding: 10px 15px;
-            color: var(--gk-text-dark);
-            transition: all 0.3s;
-        }
-        .soft-input:focus {
-            background-color: #ffffff;
-            border-color: var(--gk-primary-blue);
-            box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.1);
-        }
-        .section-header {
-            color: var(--gk-primary-blue);
-            font-weight: 800;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #eee;
+        .hover-bg:hover { background-color: rgba(255,255,255,0.05); color: var(--gk-secondary-orange) !important; }
+        .active-menu { background-color: rgba(255,255,255,0.1); border-left: 4px solid var(--gk-secondary-orange); }
+        .stat-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
             display: flex;
             align-items: center;
-            gap: 10px;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
         }
-        .section-header i { color: var(--gk-secondary-orange); }
-        
-        /* Sidebar layout for admin */
-        .admin-sidebar {
-            background: var(--gk-primary-blue);
-            color: #fff;
-            min-height: calc(100vh - 80px);
+        .stat-card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+        .stat-icon {
+            width: 60px; height: 60px;
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px;
+            margin-right: 20px;
+        }
+        .admin-panel-card {
+            background: #fff;
             border-radius: 15px;
-            padding: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border: 1px solid #f0f0f0;
+            margin-bottom: 30px;
         }
-        .admin-sidebar a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            display: block;
-            padding: 12px 15px;
-            border-radius: 8px;
-            margin-bottom: 8px;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-        .admin-sidebar a:hover, .admin-sidebar a.active {
-            background: rgba(255,255,255,0.1);
-            color: #fff;
-        }
-        .admin-sidebar a i { width: 25px; }
+        .admin-title { color: var(--gk-primary-blue); font-weight: 800; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 15px; }
+        .table-admin th { color: #6c757d; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; border-bottom: 2px solid #eee; }
+        .table-admin td { vertical-align: middle; color: #495057; border-bottom: 1px solid #f8f9fa; }
+        .badge-soft-success { background-color: rgba(25, 135, 84, 0.1); color: #198754; }
+        .badge-soft-warning { background-color: rgba(255, 193, 7, 0.1); color: #ffc107; }
+        .badge-soft-danger { background-color: rgba(220, 53, 69, 0.1); color: #dc3545; }
+        .btn-action { width: 35px; height: 35px; padding: 0; display: inline-flex; align-items: center; justify-content: center; border-radius: 8px; margin-right: 5px; }
     </style>
 </head>
-<body data-spy="scroll" data-offset="80">
+<body>
 
-    <!-- NAVBAR -->
-    <div id="navigation" class="navbar-light bg-faded site-navigation shadow-sm">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-20 align-self-center">
-                    <div class="site-logo">
-                        <a href="index.html" style="text-decoration: none !important;">
-                            <h3 style="display: flex; align-items: center; gap: 10px; margin-bottom: 0; color: #1a2237 !important;">
-                                <i class="fa-solid fa-hand-holding-heart" style="color: #ff7b00;"></i>
-                                Sistem Yönetimi
-                            </h3>
-                        </a>
-                    </div>
+    <!-- SIDEBAR -->
+    <div class="admin-sidebar">
+        <div class="p-4 text-center border-bottom border-secondary border-opacity-25 mb-3">
+            <h3 class="text-white fw-bold d-flex align-items-center justify-content-center gap-2 mb-0" style="font-size: 1.5rem;">
+                <i class="fa-solid fa-user-shield" style="color: var(--gk-secondary-orange);"></i> Admin Panel
+            </h3>
+        </div>
+        
+        <ul class="list-unstyled flex-grow-1 px-3 mt-2">
+            <li class="mb-1"><a href="#dashboard" class="d-block text-white p-3 rounded text-decoration-none active-menu fw-medium"><i class="fa-solid fa-chart-line me-3 w-20px"></i> Dashboard</a></li>
+            
+            <li class="mb-1 mt-4"><div class="text-uppercase text-white-50 ms-3 mb-2" style="font-size: 0.75rem; font-weight: 700; letter-spacing: 1px;">Kullanıcı Yönetimi</div></li>
+            <li class="mb-1"><a href="#gonullu-yonetimi" class="d-block text-white p-3 rounded text-decoration-none hover-bg fw-medium"><i class="fa-solid fa-hand-holding-heart me-3 w-20px"></i> Gönüllü Yönetimi</a></li>
+            <li class="mb-1"><a href="#50-yonetimi" class="d-block text-white p-3 rounded text-decoration-none hover-bg fw-medium"><i class="fa-solid fa-user-clock me-3 w-20px"></i> 50+ Yönetimi</a></li>
+            
+            <li class="mb-1 mt-4"><div class="text-uppercase text-white-50 ms-3 mb-2" style="font-size: 0.75rem; font-weight: 700; letter-spacing: 1px;">Sistem & Operasyon</div></li>
+            <li class="mb-1"><a href="#etkinlik-yonetimi" class="d-block text-white p-3 rounded text-decoration-none hover-bg fw-medium"><i class="fa-solid fa-masks-theater me-3 w-20px"></i> Etkinlik Yönetimi</a></li>
+            <li class="mb-1"><a href="#raporlar" class="d-block text-white p-3 rounded text-decoration-none hover-bg fw-medium"><i class="fa-solid fa-chart-pie me-3 w-20px"></i> Raporlar</a></li>
+        </ul>
+
+        <div class="p-4 mt-auto border-top border-secondary border-opacity-25">
+            <div class="d-flex align-items-center mb-3">
+                <div class="bg-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; color: var(--gk-primary-blue);">
+                    <i class="fa-solid fa-user-gear"></i>
                 </div>
-
-                <div class="col-60 d-flex justify-content-center align-items-center">
-                    <span class="badge bg-danger fs-6 px-4 py-2 rounded-pill"><i class="fa-solid fa-lock me-2"></i> Yönetici Erişimi Aktif</span>
-                </div>
-
-                <div class="col-20 d-none d-xl-block text-end align-self-center">
-                    <div class="d-flex justify-content-end align-items-center gap-3">
-                        <div class="dropdown">
-                            <a class="btn dropdown-toggle d-flex align-items-center gap-2" href="#" role="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false" style="border: 1px solid #ddd; border-radius: 30px; padding: 5px 15px 5px 5px; background: #fff;">
-                                <i class="fa-solid fa-user-shield fs-3 text-muted"></i>
-                                <span style="font-weight: 600; color: var(--gk-primary-blue);">Admin Paneli</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2" aria-labelledby="userMenu" style="border-radius: 12px;">
-                                <li><a class="dropdown-item py-2 text-danger" href="index.html"><i class="fa-solid fa-power-off me-2"></i> Çıkış Yap</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="ms-3">
+                    <h6 class="mb-0 text-white fw-bold">Sistem Yöneticisi</h6>
+                    <small class="text-white-50">admin@gonul.org</small>
                 </div>
             </div>
+            <!-- ANA SAYFAYA DÖNÜŞ BUTONU -->
+            <a href="index.html" class="btn btn-outline-light w-100 fw-bold d-flex justify-content-center align-items-center gap-2" style="border-radius: 8px; padding: 10px;">
+                <i class="fa-solid fa-house"></i> Ana Sayfaya Dön
+            </a>
         </div>
     </div>
 
-    <!-- DASHBOARD -->
-    <section class="dashboard-area section-padding pt-4 pb-5">
-        <div class="container-fluid px-5">
-            <div class="row">
-                
-                <!-- SIDEBAR -->
-                <div class="col-lg-2 d-none d-lg-block">
-                    <div class="admin-sidebar sticky-top" style="top: 100px;">
-                        <h5 class="text-white fw-bold mb-4 px-2 mt-2">Menü</h5>
-                        <a href="#" class="active"><i class="fa-solid fa-gauge"></i> Özet Tablosu</a>
-                        <a href="#"><i class="fa-solid fa-users"></i> Gönüllü Yönetimi</a>
-                        <a href="#"><i class="fa-solid fa-user-clock"></i> 50+ Kullanıcılar</a>
-                        <a href="#"><i class="fa-solid fa-list-check"></i> Destek Talepleri</a>
-                        <a href="#"><i class="fa-regular fa-calendar-days"></i> Etkinlikler</a>
-                        <a href="#"><i class="fa-regular fa-newspaper"></i> Haberler & Blog</a>
-                        <a href="#"><i class="fa-solid fa-gear"></i> Sistem Ayarları</a>
+    <!-- MAIN CONTENT -->
+    <div class="admin-content">
+        
+        <!-- HEADER / TOPBAR -->
+        <div class="d-flex justify-content-between align-items-center mb-5 pb-3 border-bottom">
+            <div>
+                <h2 class="fw-bold mb-1" style="color: var(--gk-primary-blue);">Hoş Geldiniz, Yönetici!</h2>
+                <p class="text-muted mb-0">Bugün platformda yaşanan son gelişmeleri buradan takip edebilirsiniz.</p>
+            </div>
+            <div class="d-flex gap-3">
+                <button class="btn btn-light position-relative rounded-circle" style="width: 45px; height: 45px;">
+                    <i class="fa-regular fa-bell text-dark"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- STATS ROW -->
+        <div class="row g-4 mb-5" id="dashboard">
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: rgba(26, 54, 93, 0.1); color: var(--gk-primary-blue);">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div>
+                        <h3 class="fw-bold mb-0">1,248</h3>
+                        <p class="text-muted mb-0">Toplam Gönüllü</p>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: rgba(255, 115, 22, 0.1); color: var(--gk-secondary-orange);">
+                        <i class="fa-solid fa-user-clock"></i>
+                    </div>
+                    <div>
+                        <h3 class="fw-bold mb-0">856</h3>
+                        <p class="text-muted mb-0">Kayıtlı 50+ Kullanıcı</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: rgba(25, 135, 84, 0.1); color: #198754;">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <div>
+                        <h3 class="fw-bold mb-0">432</h3>
+                        <p class="text-muted mb-0">Tamamlanan Talep</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: rgba(220, 53, 69, 0.1); color: #dc3545;">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+                    <div>
+                        <h3 class="fw-bold mb-0">12</h3>
+                        <p class="text-muted mb-0">Bekleyen Talep</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                <!-- MAIN CONTENT -->
-                <div class="col-lg-10">
-                    <!-- BÖLÜM 1: İSTATİSTİKLER -->
-                    <h3 class="fw-bold mb-4" style="color: var(--gk-primary-blue);">Genel Bakış (Dashboard)</h3>
-                    <div class="row g-4 mb-4">
-                        <div class="col-md-3">
-                            <div class="stat-card bg-gradient-blue shadow-sm">
-                                <h5>Toplam Gönüllü</h5>
-                                <h2 class="fw-bold mb-0">150</h2>
-                                <i class="fa-solid fa-users"></i>
-                            </div>
+        <!-- GÖNÜLLÜ YÖNETİMİ -->
+        <div class="admin-panel-card" id="gonullu-yonetimi">
+            <div class="d-flex justify-content-between align-items-center admin-title">
+                <span class="d-flex align-items-center gap-2"><i class="fa-solid fa-hand-holding-heart text-primary"></i> Gönüllü Yönetimi</span>
+                <button class="btn btn_one btn-sm"><i class="fa-solid fa-plus me-1"></i> Yeni Gönüllü Ekle</button>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-admin table-hover">
+                    <thead>
+                        <tr>
+                            <th>Ad Soyad</th>
+                            <th>Meslek/Durum</th>
+                            <th>Kayıt Tarihi</th>
+                            <th>Puan</th>
+                            <th>Durum</th>
+                            <th class="text-end">İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="fw-bold">Hüseyin Orhan KIRTAY</td>
+                            <td>Yazılım Geliştirici</td>
+                            <td>12 Mayıs 2026</td>
+                            <td><i class="fa-solid fa-star text-warning me-1"></i> 4.9</td>
+                            <td><span class="badge badge-soft-success px-3 py-2 rounded-pill">Aktif Gönüllü</span></td>
+                            <td class="text-end">
+                                <button class="btn btn-outline-primary btn-action"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn btn-outline-danger btn-action"><i class="fa-solid fa-ban"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Ayşe Yılmaz</td>
+                            <td>Hemşire</td>
+                            <td>15 Haziran 2026</td>
+                            <td><i class="fa-solid fa-star text-warning me-1"></i> 5.0</td>
+                            <td><span class="badge badge-soft-warning px-3 py-2 rounded-pill">Onay Bekliyor</span></td>
+                            <td class="text-end">
+                                <button class="btn btn-outline-success btn-action" title="Onayla"><i class="fa-solid fa-check"></i></button>
+                                <button class="btn btn-outline-primary btn-action"><i class="fa-regular fa-eye"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 50+ YÖNETİMİ -->
+        <div class="admin-panel-card" id="50-yonetimi">
+            <div class="d-flex justify-content-between align-items-center admin-title">
+                <span class="d-flex align-items-center gap-2"><i class="fa-solid fa-user-clock text-info"></i> 50+ Kullanıcı Yönetimi</span>
+                <button class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-file-export me-1"></i> Listeyi Dışa Aktar</button>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-admin table-hover">
+                    <thead>
+                        <tr>
+                            <th>Ad Soyad</th>
+                            <th>Bölge / Mahalle</th>
+                            <th>Sağlık Notu</th>
+                            <th>Son Talep</th>
+                            <th>Durum</th>
+                            <th class="text-end">İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="fw-bold">Ahmet Bey</td>
+                            <td>İlkadım</td>
+                            <td><i class="fa-solid fa-circle-exclamation text-warning me-1"></i> Kalp Tansiyon</td>
+                            <td>Bugün 14:00</td>
+                            <td><span class="badge badge-soft-success px-3 py-2 rounded-pill">Kayıtlı Üye</span></td>
+                            <td class="text-end">
+                                <button class="btn btn-outline-primary btn-action"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn btn-outline-secondary btn-action"><i class="fa-solid fa-pen"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Fatma Hanım</td>
+                            <td>Atakum</td>
+                            <td><i class="fa-solid fa-check-circle text-success me-1"></i> Sorunsuz</td>
+                            <td>3 Gün Önce</td>
+                            <td><span class="badge badge-soft-success px-3 py-2 rounded-pill">Kayıtlı Üye</span></td>
+                            <td class="text-end">
+                                <button class="btn btn-outline-primary btn-action"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn btn-outline-secondary btn-action"><i class="fa-solid fa-pen"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ETKİNLİK YÖNETİMİ -->
+        <div class="admin-panel-card" id="etkinlik-yonetimi">
+            <div class="d-flex justify-content-between align-items-center admin-title">
+                <span class="d-flex align-items-center gap-2"><i class="fa-solid fa-masks-theater" style="color: var(--gk-secondary-orange);"></i> Sosyal Etkinlik Yönetimi</span>
+                <button class="btn btn-success btn-sm"><i class="fa-solid fa-calendar-plus me-1"></i> Yeni Etkinlik Oluştur</button>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="p-3 border rounded-3 d-flex align-items-center bg-light">
+                        <div class="bg-primary text-white rounded p-3 text-center me-3" style="min-width: 70px;">
+                            <span class="d-block fs-5 fw-bold">12</span>
+                            <span class="d-block small">HAZ</span>
                         </div>
-                        <div class="col-md-3">
-                            <div class="stat-card bg-gradient-orange shadow-sm">
-                                <h5>50+ Kullanıcı Sayısı</h5>
-                                <h2 class="fw-bold mb-0">85</h2>
-                                <i class="fa-solid fa-user-clock"></i>
-                            </div>
+                        <div class="flex-grow-1">
+                            <h5 class="fw-bold mb-1">Sahil Yürüyüşü</h5>
+                            <p class="text-muted mb-1 small"><i class="fa-solid fa-location-dot me-1"></i> Atakum Sahili</p>
+                            <span class="badge bg-success">Yayında</span>
+                            <span class="ms-2 small text-muted">45 Kayıt</span>
                         </div>
-                        <div class="col-md-3">
-                            <div class="stat-card bg-gradient-green shadow-sm">
-                                <h5>Aktif Talepler</h5>
-                                <h2 class="fw-bold mb-0">12</h2>
-                                <i class="fa-solid fa-clipboard-list"></i>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="stat-card bg-gradient-red shadow-sm">
-                                <h5>Bekleyen Onaylar</h5>
-                                <h2 class="fw-bold mb-0">5</h2>
-                                <i class="fa-solid fa-user-shield"></i>
-                            </div>
+                        <div>
+                            <button class="btn btn-sm btn-outline-secondary mb-1 w-100"><i class="fa-solid fa-pen"></i></button>
+                            <button class="btn btn-sm btn-outline-danger w-100"><i class="fa-solid fa-trash"></i></button>
                         </div>
                     </div>
-
-                    <div class="row">
-                        <!-- BÖLÜM 2: SON TALEPLER -->
-                        <div class="col-lg-8">
-                            <div class="soft-card p-4">
-                                <div class="d-flex justify-content-between align-items-center mb-4">
-                                    <h4 class="fw-bold mb-0" style="color: var(--gk-primary-blue);">Son Gelen Destek Talepleri</h4>
-                                    <button class="btn btn-sm btn_one">Tümünü Gör</button>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="table table-hover align-middle">
-                                        <thead class="table-light">
-                                            <tr>
-                                                <th>Talep Eden</th>
-                                                <th>Tür</th>
-                                                <th>Tarih</th>
-                                                <th>Durum</th>
-                                                <th>İşlem</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><span class="fw-bold text-dark">Ahmet Yılmaz</span><br><small class="text-muted">İlkadım</small></td>
-                                                <td>Hastane Refakati</td>
-                                                <td>14.06.2026</td>
-                                                <td><span class="badge bg-warning text-dark">Eşleşme Bekliyor</span></td>
-                                                <td><button class="btn btn-sm btn-outline-primary">Ata</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span class="fw-bold text-dark">Ayşe Demir</span><br><small class="text-muted">Atakum</small></td>
-                                                <td>Sıcak Sohbet</td>
-                                                <td>12.06.2026</td>
-                                                <td><span class="badge bg-success">Eşleşti</span></td>
-                                                <td><button class="btn btn-sm btn-outline-secondary">Detay</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span class="fw-bold text-dark">Hasan Kaya</span><br><small class="text-muted">Tekkeköy</small></td>
-                                                <td>Alışveriş</td>
-                                                <td>15.06.2026</td>
-                                                <td><span class="badge bg-warning text-dark">Eşleşme Bekliyor</span></td>
-                                                <td><button class="btn btn-sm btn-outline-primary">Ata</button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-3 border rounded-3 d-flex align-items-center bg-light">
+                        <div class="bg-warning text-dark rounded p-3 text-center me-3" style="min-width: 70px;">
+                            <span class="d-block fs-5 fw-bold">20</span>
+                            <span class="d-block small">HAZ</span>
                         </div>
-
-                        <!-- BÖLÜM 3: GÖNÜLLÜ ONAY BEKLEYENLER -->
-                        <div class="col-lg-4">
-                            <div class="soft-card p-4">
-                                <h4 class="fw-bold mb-4" style="color: var(--gk-primary-blue);">Yeni Gönüllü Onayları</h4>
-                                
-                                <div class="d-flex align-items-center mb-3 p-3 rounded-3" style="border: 1px solid #eee; background: #f8f9fa;">
-                                    <i class="fa-solid fa-user-graduate fs-3 text-secondary me-3"></i>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-0 fw-bold">Merve Çelik</h6>
-                                        <small class="text-muted">Hemşirelik 2. Sınıf</small>
-                                    </div>
-                                    <div>
-                                        <button class="btn btn-sm btn-success px-2 py-1 me-1" title="Onayla"><i class="fa-solid fa-check"></i></button>
-                                        <button class="btn btn-sm btn-danger px-2 py-1" title="Reddet"><i class="fa-solid fa-xmark"></i></button>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex align-items-center p-3 rounded-3" style="border: 1px solid #eee; background: #f8f9fa;">
-                                    <i class="fa-solid fa-user fs-3 text-secondary me-3"></i>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-0 fw-bold">Burak Yılmaz</h6>
-                                        <small class="text-muted">Mühendis (Mezun)</small>
-                                    </div>
-                                    <div>
-                                        <button class="btn btn-sm btn-success px-2 py-1 me-1" title="Onayla"><i class="fa-solid fa-check"></i></button>
-                                        <button class="btn btn-sm btn-danger px-2 py-1" title="Reddet"><i class="fa-solid fa-xmark"></i></button>
-                                    </div>
-                                </div>
-                                
-                                <button class="btn btn-outline-primary w-100 mt-3">Tüm Başvuruları Gör</button>
-                            </div>
+                        <div class="flex-grow-1">
+                            <h5 class="fw-bold mb-1">Akıllı Telefon Atölyesi</h5>
+                            <p class="text-muted mb-1 small"><i class="fa-solid fa-location-dot me-1"></i> Üniversite Kampüsü</p>
+                            <span class="badge bg-warning text-dark">Taslak</span>
+                            <span class="ms-2 small text-muted">0 Kayıt</span>
+                        </div>
+                        <div>
+                            <button class="btn btn-sm btn-outline-secondary mb-1 w-100"><i class="fa-solid fa-pen"></i></button>
+                            <button class="btn btn-sm btn-outline-success w-100" title="Yayınla"><i class="fa-solid fa-upload"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- FOOTER -->
-    <div class="foot_copy mt-0">
-        <div class="footer_copyright text-center py-4 bg-white" style="border-top: 1px solid #eee;">
-            <p class="mb-0 text-muted">© 2026. Yönetim Paneli. Proje: <b>Gönül Köprüsü</b> | Geliştirici: <b>Hüseyin Orhan KIRTAY</b></p>
+        <!-- RAPORLAR -->
+        <div class="admin-panel-card mb-0" id="raporlar">
+            <div class="d-flex justify-content-between align-items-center admin-title">
+                <span class="d-flex align-items-center gap-2"><i class="fa-solid fa-chart-pie text-secondary"></i> Sistem Raporları & İstatistikler</span>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="p-4 border rounded-3 bg-light">
+                        <i class="fa-solid fa-chart-bar fs-1 text-primary mb-3"></i>
+                        <h5>Aylık Büyüme Raporu</h5>
+                        <p class="text-muted small">Son 30 günün kullanıcı kayıt ve etkileşim analizleri.</p>
+                        <button class="btn btn-outline-primary btn-sm w-100"><i class="fa-solid fa-download me-1"></i> İndir (PDF)</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 border rounded-3 bg-light">
+                        <i class="fa-solid fa-file-invoice fs-1 text-success mb-3"></i>
+                        <h5>Talep Karşılama Oranı</h5>
+                        <p class="text-muted small">Açılan taleplerin gönüllüler tarafından başarıyla sonuçlanma analizi.</p>
+                        <button class="btn btn-outline-success btn-sm w-100"><i class="fa-solid fa-download me-1"></i> İndir (Excel)</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 border rounded-3 bg-light">
+                        <i class="fa-solid fa-ranking-star fs-1 text-warning mb-3"></i>
+                        <h5>En İyi Gönüllüler</h5>
+                        <p class="text-muted small">Aylık en fazla görev alan ve en yüksek puanı toplayan gönüllü listesi.</p>
+                        <button class="btn btn-outline-warning btn-sm text-dark w-100"><i class="fa-solid fa-eye me-1"></i> Görüntüle</button>
+                    </div>
+                </div>
+            </div>
         </div>
+        
+        <!-- FOOTER (Admin için küçük footer) -->
+        <div class="text-center mt-5 mb-2 text-muted small">
+            &copy; 2026 Gönül Köprüsü Admin Paneli. Tüm Hakları Saklıdır.
+        </div>
+
     </div>
 
     <!-- JAVASCRIPT DOSYALARI -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
 </body>
 </html>
