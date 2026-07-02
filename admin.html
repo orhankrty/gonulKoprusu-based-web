@@ -130,7 +130,7 @@
         <!-- STATS ROW -->
         <div class="row g-4 mb-5" id="dashboard">
             <div class="col-md-3">
-                <div class="stat-card">
+                <div class="stat-card h-100">
                     <div class="stat-icon" style="background-color: rgba(26, 54, 93, 0.1); color: var(--gk-primary-blue);">
                         <i class="fa-solid fa-users"></i>
                     </div>
@@ -141,7 +141,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="stat-card">
+                <div class="stat-card h-100">
                     <div class="stat-icon" style="background-color: rgba(255, 115, 22, 0.1); color: var(--gk-secondary-orange);">
                         <i class="fa-solid fa-user-clock"></i>
                     </div>
@@ -152,7 +152,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="stat-card">
+                <div class="stat-card h-100">
                     <div class="stat-icon" style="background-color: rgba(25, 135, 84, 0.1); color: #198754;">
                         <i class="fa-solid fa-clipboard-check"></i>
                     </div>
@@ -163,7 +163,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="stat-card">
+                <div class="stat-card h-100">
                     <div class="stat-icon" style="background-color: rgba(220, 53, 69, 0.1); color: #dc3545;">
                         <i class="fa-solid fa-hourglass-half"></i>
                     </div>
@@ -320,35 +320,91 @@
             </div>
             <div class="row g-4 text-center">
                 <div class="col-md-4">
-                    <div class="p-4 border rounded-3 bg-light">
+                    <div class="p-4 border rounded-3 bg-light h-100 d-flex flex-column">
                         <i class="fa-solid fa-chart-bar fs-1 text-primary mb-3"></i>
                         <h5>Aylık Büyüme Raporu</h5>
-                        <p class="text-muted small">Son 30 günün kullanıcı kayıt ve etkileşim analizleri.</p>
-                        <button class="btn btn-outline-primary btn-sm w-100"><i class="fa-solid fa-download me-1"></i> İndir (PDF)</button>
+                        <p class="text-muted small flex-grow-1">Son 30 günün kullanıcı kayıt ve etkileşim analizleri.</p>
+                        <button class="btn btn-outline-primary btn-sm w-100 mt-auto"><i class="fa-solid fa-download me-1"></i> İndir (PDF)</button>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 border rounded-3 bg-light">
+                    <div class="p-4 border rounded-3 bg-light h-100 d-flex flex-column">
                         <i class="fa-solid fa-file-invoice fs-1 text-success mb-3"></i>
                         <h5>Talep Karşılama Oranı</h5>
-                        <p class="text-muted small">Açılan taleplerin gönüllüler tarafından başarıyla sonuçlanma analizi.</p>
-                        <button class="btn btn-outline-success btn-sm w-100"><i class="fa-solid fa-download me-1"></i> İndir (Excel)</button>
+                        <p class="text-muted small flex-grow-1">Açılan taleplerin gönüllüler tarafından başarıyla sonuçlanma analizi.</p>
+                        <button class="btn btn-outline-success btn-sm w-100 mt-auto"><i class="fa-solid fa-download me-1"></i> İndir (Excel)</button>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 border rounded-3 bg-light">
+                    <div class="p-4 border rounded-3 bg-light h-100 d-flex flex-column">
                         <i class="fa-solid fa-ranking-star fs-1 text-warning mb-3"></i>
                         <h5>En İyi Gönüllüler</h5>
-                        <p class="text-muted small">Aylık en fazla görev alan ve en yüksek puanı toplayan gönüllü listesi.</p>
-                        <button class="btn btn-outline-warning btn-sm text-dark w-100"><i class="fa-solid fa-eye me-1"></i> Görüntüle</button>
+                        <p class="text-muted small flex-grow-1">Aylık en fazla görev alan ve en yüksek puanı toplayan gönüllü listesi.</p>
+                        <button class="btn btn-outline-warning btn-sm text-dark w-100 mt-auto"><i class="fa-solid fa-eye me-1"></i> Görüntüle</button>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- FOOTER (Admin için küçük footer) -->
-        <div class="text-center mt-5 mb-2 text-muted small">
-            &copy; 2026 Gönül Köprüsü Admin Paneli. Tüm Hakları Saklıdır.
+        <!-- FOOTER -->
+        <div id="iletisim" class="footer mt-5" style="background-color: var(--gk-primary-blue); padding: 50px 0 30px; border-radius: 15px 15px 0 0;">
+            <div class="container-fluid">             
+                <div class="row justify-content-between">                       
+                    
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="single_footer">
+                            <a href="index.html" style="text-decoration: none;">
+                                <h3 style="color: #ffffff; font-weight: 700; margin-bottom: 20px; font-size: 1.5rem; letter-spacing: -0.5px;">Gönül Köprüsü</h3>
+                            </a>        
+                            <p style="color: rgba(255,255,255,0.7); line-height: 1.6; font-size: 0.9rem; padding-right: 20px; margin-bottom: 0;">
+                                Samsun'da yaşayan ihtiyaç sahibi 50 yaş ve üzeri yalnız bireylerin sosyal destek ihtiyaçlarını gönüllülük esasıyla çözen dijital dayanışma platformu.
+                            </p>
+                        </div>          
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 d-flex justify-content-lg-center">
+                        <div class="single_footer">
+                            <h4 style="color: #ffffff; font-weight: 600; margin-bottom: 20px; font-size: 1.2rem;">Hızlı Bağlantılar</h4>
+                            <ul class="list-unstyled" style="margin: 0; padding: 0; font-size: 0.9rem;">
+                                <li style="margin-bottom: 10px;">
+                                    <a href="index.html#hakkimizda" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s;"><i class="fa-solid fa-angle-right" style="font-size: 0.8rem; margin-right: 8px; color: var(--gk-secondary-orange);"></i> Proje Hakkında</a>
+                                </li>
+                                <li style="margin-bottom: 10px;">
+                                    <a href="instructor.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s;"><i class="fa-solid fa-angle-right" style="font-size: 0.8rem; margin-right: 8px; color: var(--gk-secondary-orange);"></i> Kahraman Gönüllülerimiz</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s;"><i class="fa-solid fa-angle-right" style="font-size: 0.8rem; margin-right: 8px; color: var(--gk-secondary-orange);"></i> Gönüllü Başvuru Formu</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-12 col-12">
+                        <div class="single_footer">
+                            <h4 style="color: #ffffff; font-weight: 600; margin-bottom: 20px; font-size: 1.2rem;">İletişim Bilgileri</h4>
+                            
+                            <div class="d-flex align-items-center mb-3" style="font-size: 0.9rem;">
+                                <div style="width: 35px; height: 35px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">
+                                    <i class="fa-solid fa-map-location-dot" style="color: var(--gk-secondary-orange); font-size: 1rem; line-height: 1;"></i>
+                                </div>
+                                <p style="color: rgba(255,255,255,0.7); line-height: 1.4; margin-bottom: 0;">Samsun Üniversitesi Ballıca Kampüsü<br>Samsun, Türkiye</p>
+                            </div>
+                            
+                            <div class="d-flex align-items-center" style="font-size: 0.9rem;">
+                                <div style="width: 35px; height: 35px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">
+                                    <i class="fa-regular fa-envelope" style="color: var(--gk-secondary-orange); font-size: 1rem; line-height: 1;"></i>
+                                </div>
+                                <p style="color: rgba(255,255,255,0.7); line-height: 1.4; margin-bottom: 0;">iletisim@gonulkoprusu.org</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="foot_copy p-3 text-center" style="background-color: #112543; border-radius: 0 0 15px 15px;">
+            <p class="mb-0 text-white-50" style="font-size: 0.9rem;">&copy; 2026. Tüm Hakları Saklıdır. <b>Gönül Köprüsü</b> | Geliştirici: <b>Hüseyin Orhan KIRTAY</b></p>
         </div>
 
     </div>
