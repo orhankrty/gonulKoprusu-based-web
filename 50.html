@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Gönül Köprüsü - 50+ Kullanıcı Paneli">
+    <title>50+ Kullanıcı Paneli | Gönül Köprüsü</title>
+    
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/jquery-simple-mobilemenu.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/gonul-koprusu-custom.css">
+
+    <style>
+        body { background-color: var(--gk-bg-light); font-size: 1.2rem; } /* Büyütülmüş font */
+        .soft-card { 
+            background: #ffffff; 
+            border: none; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03); 
+            overflow: hidden;
+            margin-bottom: 40px; 
+        }
+        .soft-input {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 15px 20px;
+            color: var(--gk-text-dark);
+            transition: all 0.3s;
+            font-size: 1.1rem;
+        }
+        .soft-input:focus {
+            background-color: #ffffff;
+            border-color: var(--gk-primary-blue);
+            box-shadow: 0 0 0 4px rgba(26, 54, 93, 0.1);
+        }
+        .form-label { font-weight: 700; color: var(--gk-primary-blue); margin-bottom: 10px; font-size: 1.1rem; }
+        .table-soft tbody tr { transition: all 0.2s; border-left: 4px solid transparent; }
+        .table-soft tbody tr:hover { background-color: #fdfdfd; border-left-color: var(--gk-primary-blue); }
+        .section-header {
+            color: var(--gk-primary-blue);
+            font-weight: 800;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .section-header i { color: var(--gk-secondary-orange); }
+        .btn-large {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-offset="80">
+    <div class="preloaders">
+        <div class="gk-brand-loader">
+            <div class="gk-icon-pulse">
+                <i class="fa-solid fa-hand-holding-heart" style="color: #ff7b00; font-size: 70px;"></i>
+            </div>
+            <h2 class="gk-loader-title">Gönül Köprüsü</h2>
+            <p class="gk-loader-desc">Paneliniz Hazırlanıyor...</p>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <div id="navigation" class="navbar-light bg-faded site-navigation shadow-sm">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-20 align-self-center">
+                    <div class="site-logo">
+                        <a href="index.html" style="text-decoration: none !important;">
+                            <h3 style="display: flex; align-items: center; gap: 10px; margin-bottom: 0; color: #1a2237 !important;">
+                                <i class="fa-solid fa-hand-holding-heart" style="color: #ff7b00;"></i>
+                                Gönül Köprüsü
+                            </h3>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-60 d-flex">
+                    <nav id="main-menu" aria-label="Ana Menü">
+                        <ul>
+                            <li><a href="index.html">Ana Sayfa</a></li>
+                            <li><a href="course.html">Etkinlikler</a></li>
+                            <li><a href="contact.html">Bize Ulaşın</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-20 d-none d-xl-block text-end align-self-center">
+                    <div class="d-flex justify-content-end align-items-center gap-3">
+                        <div class="dropdown">
+                            <a class="btn dropdown-toggle d-flex align-items-center gap-2" href="#" role="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false" style="border: 1px solid #ddd; border-radius: 30px; padding: 5px 15px 5px 5px; background: #fff;">
+                                <i class="fa-solid fa-user-circle fs-3 text-muted"></i>
+                                <span style="font-weight: 600; color: var(--gk-primary-blue);">Ahmet Bey</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2" aria-labelledby="userMenu" style="border-radius: 12px; min-width: 200px;">
+                                <li><a class="dropdown-item py-2" href="50.html"><i class="fa-solid fa-user-circle me-2 text-muted"></i> Hesabım</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item py-2 text-danger" href="index.html"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i> Güvenli Çıkış</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BREADCRUMB -->
+    <section class="section-top" style="padding: 40px 0 20px 0;">
+        <div class="container">
+            <div class="col-lg-12 text-center">
+                <div class="section-top-title">
+                    <h2 style="font-size: 32px; margin-bottom: 5px; color: var(--gk-primary-blue);">50+ Kullanıcı Paneli</h2>
+                    <ul style="justify-content: center; margin-bottom: 0;">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li> / 50+ Paneli</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="dashboard-area section-padding pt-4 pb-5">
+        <div class="container">
+            
+            <div class="row align-items-stretch mb-5">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="soft-card h-100 text-center p-5 d-flex flex-column justify-content-center">
+                        <div class="position-relative d-inline-block mx-auto mb-4">
+                            <i class="fa-solid fa-user-tie text-muted" style="font-size: 100px; padding: 20px; background: #f8f9fa; border-radius: 50%; border: 5px solid #eee;"></i>
+                        </div>
+                        <h3 style="color: var(--gk-primary-blue); font-weight: 800; margin-bottom: 10px;">Ahmet Yılmaz</h3>
+                        <p class="text-muted mb-3" style="font-size: 1.2rem;">Kayıtlı Katılımcı</p>
+                        <div>
+                            <span class="badge bg-info text-dark" style="padding: 10px 20px; font-size: 1.1rem; border-radius: 8px;">
+                                <i class="fa-solid fa-check-circle me-2"></i> Onaylı Üye
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="soft-card h-100 p-0 d-flex flex-column">
+                        <div class="p-4 p-md-5 text-white flex-grow-1" style="background: linear-gradient(135deg, var(--gk-primary-blue), #2a5298); position: relative; overflow: hidden;">
+                            <i class="fa-solid fa-hands-holding-circle position-absolute" style="font-size: 15rem; right: -20px; bottom: -50px; opacity: 0.1;"></i>
+                            <div class="position-relative z-index-1">
+                                <h2 class="text-white mb-3 fw-bold">Sizi Tekrar Görmek Ne Güzel, Ahmet Bey!</h2>
+                                <p class="mb-0 fs-4" style="opacity: 0.9; max-width: 90%; line-height: 1.6;">Sağlıklı ve mutlu bir gün dileriz. Aktif olarak yaklaşan <strong>1 randevunuz</strong> bulunmaktadır.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4">
+                            <div class="row text-center">
+                                <div class="col-6" style="border-right: 1px solid #eee;">
+                                    <h2 class="fw-bold mb-0" style="color: var(--gk-primary-blue);">12</h2>
+                                    <p class="text-muted mb-0 fs-5">Alınan Destek Sayısı</p>
+                                </div>
+                                <div class="col-6">
+                                    <h2 class="fw-bold mb-0 text-success"><i class="fa-solid fa-circle-check"></i></h2>
+                                    <p class="text-muted mb-0 fs-5">Durum: Aktif</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BÖLÜM 2: DESTEK TALEBİ OLUŞTUR -->
+            <div class="soft-card p-4 p-md-5" style="border: 3px solid var(--gk-secondary-orange);">
+                <h3 class="section-header"><i class="fa-solid fa-handshake-angle"></i> Yeni Destek Talebi Oluştur</h3>
+                <p class="fs-5 text-muted mb-4">Size nasıl yardımcı olabiliriz? Lütfen ihtiyacınız olan destek türünü ve zamanını seçin.</p>
+                <form>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <label class="form-label">Destek Türü</label>
+                            <select class="form-control soft-input form-control-lg">
+                                <option>Alışveriş Refakati</option>
+                                <option>Hastane Refakati</option>
+                                <option>Sıcak Sohbet / Ziyaret</option>
+                                <option>Teknoloji / Telefon Kullanımı Desteği</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Tarih</label>
+                            <input type="date" class="form-control soft-input form-control-lg">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Detaylı Açıklama (İsteğe Bağlı)</label>
+                            <textarea class="form-control soft-input form-control-lg" rows="3" placeholder="Örn: Salı Pazarı'na gideceğim, pazar arabasını taşımak için desteğe ihtiyacım var..."></textarea>
+                        </div>
+                        <div class="col-12 mt-4 text-center">
+                            <button type="button" class="btn btn_one btn-large px-5 w-100" style="max-width: 400px;"><i class="fa-solid fa-paper-plane me-2"></i> Talebimi Gönder</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- BÖLÜM 3: TALEPLERİM -->
+            <div class="soft-card p-4 p-md-5">
+                <h3 class="section-header"><i class="fa-solid fa-calendar-check"></i> Randevu ve Taleplerim</h3>
+                <div class="table-responsive">
+                    <table class="table table-soft align-middle table-hover fs-5">
+                        <thead class="table-light text-muted">
+                            <tr>
+                                <th class="ps-4 border-0 rounded-start py-3">Talep Tanımı</th>
+                                <th class="border-0 py-3">Tarih / Saat</th>
+                                <th class="border-0 py-3">Eşleşen Gönüllü</th>
+                                <th class="text-end pe-4 border-0 rounded-end py-3">Durum</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ps-4 py-4">
+                                    <h5 class="mb-1 fw-bold fs-4" style="color: var(--gk-primary-blue);">Hastane Refakati</h5>
+                                    <span class="text-muted"><i class="fa-solid fa-location-dot me-1"></i> İlkadım Araştırma Hastanesi</span>
+                                </td>
+                                <td class="py-4">
+                                    <span class="d-block fw-bold text-dark">14 Haziran 2026</span>
+                                    <span class="text-muted">14:30</span>
+                                </td>
+                                <td class="py-4">
+                                    <span class="d-block fw-bold" style="color: var(--gk-primary-blue);"><i class="fa-solid fa-user me-2"></i> Hüseyin Orhan KIRTAY</span>
+                                    <span class="text-muted"><i class="fa-solid fa-phone me-1"></i> +90 555 *** ** **</span>
+                                </td>
+                                <td class="text-end pe-4 py-4"><span class="badge bg-success px-4 py-3 fs-5 rounded-pill">Gönüllü Yolda</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4 py-4">
+                                    <h5 class="mb-1 fw-bold fs-4" style="color: var(--gk-primary-blue);">Sıcak Sohbet</h5>
+                                    <span class="text-muted"><i class="fa-solid fa-location-dot me-1"></i> Ev Ziyareti</span>
+                                </td>
+                                <td class="py-4">
+                                    <span class="d-block fw-bold text-dark">10 Haziran 2026</span>
+                                    <span class="text-muted">15:00</span>
+                                </td>
+                                <td class="py-4">
+                                    <span class="d-block fw-bold text-muted"><i class="fa-solid fa-user me-2"></i> Ayşe Yılmaz</span>
+                                </td>
+                                <td class="text-end pe-4 py-4"><span class="badge bg-secondary px-4 py-3 fs-5 rounded-pill">Tamamlandı</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- BÖLÜM 4: SAĞLIK VE ACİL DURUM -->
+            <div class="soft-card p-4 p-md-5" style="background-color: #fff9f9; border-left: 5px solid #dc3545;">
+                <h3 class="section-header text-danger" style="border-bottom-color: #f5c6cb;"><i class="fa-solid fa-notes-medical text-danger"></i> Sağlık ve Acil Durum Bilgileriniz</h3>
+                <p class="fs-5 text-muted mb-4">Bu bilgiler, gönüllülerimiz size eşlik ederken acil bir durum yaşanırsa kullanılmak üzere güvenle saklanmaktadır.</p>
+                <form>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <label class="form-label text-dark">Kronik Rahatsızlıklarınız</label>
+                            <input type="text" class="form-control soft-input form-control-lg" value="Tansiyon, Şeker Hastalığı">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-dark">Sürekli Kullandığınız İlaçlar</label>
+                            <input type="text" class="form-control soft-input form-control-lg" value="Tansiyon İlacı">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-dark">Acil Durumda Ulaşılacak Kişi</label>
+                            <input type="text" class="form-control soft-input form-control-lg" value="Oğlum: Mehmet Yılmaz">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-dark">Acil Durum Telefonu</label>
+                            <input type="tel" class="form-control soft-input form-control-lg" value="+90 532 123 45 67">
+                        </div>
+                        <div class="col-12 mt-4 text-end">
+                            <button type="button" class="btn btn-outline-danger btn-large px-5"><i class="fa-solid fa-floppy-disk me-2"></i> Bilgilerimi Güncelle</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="iletisim-footer" class="footer section-padding">
+        <div class="container">
+            <div class="row text-center text-lg-start">
+                <div class="col-lg-12">
+                    <h3 style="color:white; font-size: 2rem;">Gönül Köprüsü'ne Katıldığınız İçin Teşekkür Ederiz.</h3>
+                    <p style="font-size: 1.2rem; margin-top: 15px;">Herhangi bir sorunuz olursa <b>0850 123 45 67</b> numaralı hattımızdan bize her zaman ulaşabilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot_copy">
+        <div class="footer_copyright text-center">
+            <p style="font-size: 1.1rem;">© 2026. Tüm Hakları Saklıdır. Proje: <b>Gönül Köprüsü</b> | Geliştirici: <b>Hüseyin Orhan KIRTAY</b></p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT DOSYALARI -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/modernizr-2.8.3.min.js"></script>
+    <script src="assets/js/jquery-simple-mobilemenu.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
